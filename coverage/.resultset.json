@@ -1,0 +1,73 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/helpers/about_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/helpers/info_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/controllers/about_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/controllers/info_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/Wil/Turing/mod-3/projects/shelter/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1504124011
+  }
+}
