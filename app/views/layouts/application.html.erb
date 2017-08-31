@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shelter</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Shelter - Community when you need it most</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%= stylesheet_link_tag 'main.css', media: 'all' %>
+    <%= javascript_include_tag 'jquery.min.js' %>
+    <%= javascript_include_tag 'main.js' %>
+    <%= javascript_include_tag 'skel.min.js' %>
+    <%= javascript_include_tag 'util.js' %>
   </head>
 
   <body>
-    <%= yield %>
+		<div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="logo">
+            <span class="symbol"> <%= image_tag "home_icon.png" %> </span><span class="title">Shelter</span>
+          </a>
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <!-- link to various pages/nav links via the below lines -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html">Fuck You</a></li>
+          <li><a href="generic.html">Fuck You Too</a></li>
+          <li><a href="generic.html">Go Fuck Yourself</a></li>
+          <li><a href="elements.html">Lots</a></li>
+        </ul>
+      </nav>
+
+					<div id="main">
+						<div class="inner">
+
+              <%= yield %>
+
+						</div>
+					</div>
+          <%= render "layouts/footer" %>
+			</div>
+
   </body>
 </html>
