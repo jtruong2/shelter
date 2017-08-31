@@ -9,6 +9,24 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'capybara/rails'
 
+  def stub_omniauth
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+      provider: “google”,
+      uid: "12345678910",
+      info: {
+        email: "homies@shelteredhomies.com”,
+        first_name: “Phillis”,
+        last_name: “Holland”
+      },
+      credentials: {
+        token: “abcdefg12345",
+        refresh_token: "12345abcdefg",
+        expires_at: DateTime.now,
+      }
+      })
+  end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
