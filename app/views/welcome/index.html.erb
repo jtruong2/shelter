@@ -2,3 +2,9 @@
 <p>Find me in app/views/welcome/index.html.erb</p>
 <%= button_to "About", about_path, method: :get, class: "about-btn" %>
 <%= button_to "How It Works", info_path, method: :get, class: "info-btn" %>
+<% if current_user %>
+  <p>Welcome, <%= current_user.email %></p>
+  <%= link_to "Logout", logout_path, method: :delete %>
+<% else %>
+  <%= link_to "Login", login_path %>
+<% end %>
