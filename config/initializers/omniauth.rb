@@ -1,9 +1,11 @@
+OmniAuth.config.logger = Rails.logger
+
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV["GOOGLE_CLIENT_SECRET"],
+  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"],
   {
-    :client_id => ENV['GOOGLE_CLIENT_ID']
+    # :client_id => ENV['GOOGLE_CLIENT_ID']
     :name => "google",
-    :scope => ['contacts','plus.login','plus.me','email','profile'],
+    :scope => ['contacts','plus.login','plus.me'],
     :prompt => "select_account",
     :image_aspect_ratio => "square",
     :image_size => 50,

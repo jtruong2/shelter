@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get '/info', to: 'info#show'
 
   get '/login', to: 'sessions#new'
-  get '/auth/google/callback', to: 'sessions#create'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  # get '/auth/google_oauth2', as: 'google_login'
   get '/auth/google', as: 'google_login'
   # get '/o/oauth2/auth', as: 'google_login'
-  get '/balls', to: 'sessions#destroy'
 end
