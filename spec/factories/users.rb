@@ -5,7 +5,6 @@ FactoryGirl.define do
     last_name "MyString"
     email "MyString"
     token "MyString"
-    refesh_token "MyString"
     image "MyString"
   end
 end
