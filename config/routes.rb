@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'welcome#index'
 
   get '/about', to: 'about#show'
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/google', as: 'google_login'
-  delete '/logout', to: 'sessions#destroy' 
+  delete '/logout', to: 'sessions#destroy'
 end
