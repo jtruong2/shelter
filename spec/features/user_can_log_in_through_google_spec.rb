@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "User Can Sign In Through Google" do
   it "Sees that home Page with User name" do
-    
+    Role.create(name: "user")
+
     stub_omniauth
 
     visit '/'
