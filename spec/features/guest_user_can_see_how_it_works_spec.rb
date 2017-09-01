@@ -12,7 +12,7 @@ RSpec.describe "Guest Visits Home Page" do
 
   it "clicks on about link" do
     visit '/'
-    click_on "About"
+    click_on "About", :first
     expect(current_path).to eq about_path
     expect(page).to have_content "Turing"
     expect(page).to have_content "Do NOT Use"
@@ -21,7 +21,7 @@ RSpec.describe "Guest Visits Home Page" do
   it "clicks on How It Works link" do
     visit '/'
 
-    click_on "How It Works"
+    click_on "How It Works", :first
 
     expect(current_path).to eq info_path
     expect(page).to have_content "For Families and Individuals in Need"
