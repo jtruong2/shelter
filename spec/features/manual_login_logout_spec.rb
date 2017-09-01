@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe "User can create an account for manual login" do
   it "creates a manual login" do
-    user = create(:user)
+    user = build(:user)
 
     visit '/'
     click_on "Manual"
@@ -20,16 +20,20 @@ RSpec.describe "User can create an account for manual login" do
     expect(page).to have_content("Welcome, #{user.email}")
   end
 
-  it "logs into account with valid credentials" do
+  it "logs into account with valid credentials and logs out" do
     user = create(:user)
 
     visit '/'
     click_on "Manual"
     fill_in("session[email]", with: user.email)
-    fill_in("session[password]", with: user.password)
+    fill_in("session[password]", with: "password")
     click_on "Sign In"
 
     expect(current_path).to eq(root_path)
     expect(page).to have_content("Welcome, #{user.email}")
+
+    click_on "Logout"
+
+    expect(page).to_not have_content("Welcome, #{user.email}")
   end
 end

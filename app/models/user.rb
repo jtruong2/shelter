@@ -11,6 +11,7 @@ class User < ApplicationRecord
       user.email = auth["info"]["email"]
       user.image = auth["info"]["image"]
       user.token = auth["credentials"]["token"]
+      user.password = "password"
     end
   end
 end

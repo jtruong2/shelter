@@ -4,12 +4,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    byebug
-    if user = User.from_omniauth(request.env["omniauth.auth"])
-      session[:user_id] = user.id
-      redirect_to root_path
+    if request.env["omniauth.auth"]
+      if user = User.from_omniauth(request.env["omniauth.auth"])
+        session[:user_id] = user.id
+        redirect_to root_path
+      else
+        redirect_to root_path
+      end
     else
-      redirect_to root_path
+      user = User.find_by(email: params[:session]["email"])
+      if user && user.authenticate(params[:session]["password"])
+        session[:user_id] = user.id
+        redirect_to root_path
+      else
+        redirect_to login_path
+      end
     end
   end
 

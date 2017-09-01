@@ -7,10 +7,6 @@ RSpec.describe "User Can Sign In Through Google" do
 
     visit '/'
 
-    click_on "Login"
-
-    expect(current_path).to eq login_path
-
     click_on "Google"
 
     expect(current_path).to eq root_path
