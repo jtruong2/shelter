@@ -1,3 +1,13 @@
-<h1>Sessions#new</h1>
+<h1>Login</h1>
 
-<%= link_to "Sign In With Google", google_login_path %>
+ <%= form_for :session, url: login_path do |f|%>
+  <%= f.label :Email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :Password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign In" %>
+<% end %>
+<p>Don't have an Account?</p>
+<%= link_to "Register", new_user_path %>
