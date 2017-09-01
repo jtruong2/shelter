@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/google', as: 'google_login'
   delete '/logout', to: 'sessions#destroy'
+  resources :users, only: [:new, :create]
 end

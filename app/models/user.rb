@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_secure_password
+  validates_confirmation_of :password
+  validates :password, :presence => true, :confirmation => true
+
   def self.from_omniauth(auth)
     find_or_create_by(uid: auth[:uid]) do |user|
       user.uid = auth["uid"]
@@ -9,4 +13,6 @@ class User < ApplicationRecord
       user.token = auth["credentials"]["token"]
     end
   end
+
+  def 
 end
