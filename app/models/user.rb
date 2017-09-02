@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true, uniqueness: true
+
   def self.from_omniauth(auth)
     find_or_create_by(uid: auth[:uid]) do |user|
       user.uid = auth["uid"]
