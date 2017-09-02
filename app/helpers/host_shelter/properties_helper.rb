@@ -1,0 +1,2 @@
+module HostShelter::PropertiesHelper
+end
