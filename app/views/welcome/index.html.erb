@@ -8,7 +8,7 @@ Please click one of the options below to log in.</h1>
     <span class="image">
       <%= image_tag "g.png" %>
     </span>
-    <a href="google.html">
+    <a href="<%= google_login_path %>">
       <h2>Google</h2>
       <div class="content">
         <p>Use Google Authentication to sign in.</p>
@@ -30,7 +30,7 @@ Please click one of the options below to log in.</h1>
     <span class="image">
       <%= image_tag "typing.png" %>
     </span>
-    <a href="Manuel.html">
+    <a href="<%= login_path %>">
       <h2>Manual</h2>
       <div class="content">
         <p>Sign in manually to access the app.</p>
@@ -45,7 +45,7 @@ Please click one of the options below to log in.</h1>
 <%= button_to "How It Works", info_path, method: :get, class: "info-btn" %>
 <% if current_user %>
   <p>Welcome, <%= current_user.email %></p>
-  <%= link_to "Logout", logout_path, method: :delete %>
+  <%= button_to "Logout", logout_path, method: :delete %>
 <% else %>
   <%= link_to "Login", login_path %>
 <% end %>
