@@ -12,7 +12,9 @@ RSpec.describe "Guest Visits Home Page" do
 
   it "clicks on about link" do
     visit '/'
+
     click_on "About", :first
+
     expect(current_path).to eq about_path
     expect(page).to have_content "Turing"
     expect(page).to have_content "Do NOT Use"

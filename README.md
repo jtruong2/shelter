@@ -1,3 +1,10 @@
+www.shelter-in-need.herokuapp.com
+
+
+heroku git:clone-a shelter-in-need 
+
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
