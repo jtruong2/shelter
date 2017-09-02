@@ -1,0 +1,16 @@
+<h1>Create an Host Shelter</h1>
+<%= form_for [:host_shelters, @property] do |f| %>
+  <%= f.label :Street_Address %>
+  <%= f.text_field :street_address %>
+
+  <%= f.label :City%>
+  <%= f.text_field :city %>
+
+  <%= f.label :State%>
+  <%= select_tag :state, options_for_select(us_states), include_blank: true %>
+
+  <%= f.label :Rooms_Available%>
+  <%= number_field(:property, :rooms_available, in: 1.0..10.0, step: 1) %><br />
+
+  <%= f.submit "Create Host Shelter" %>
+<% end %>
