@@ -12,7 +12,7 @@ RSpec.describe "User Can Sign In Through Google" do
 
     expect(current_path).to eq host_shelters_sign_up_path
 
-    fill_in "property_street_address", with: "123 Circle Drive"
+    fill_in "property[street_address]", with: "123 Circle Drive"
     fill_in "property_city", with: "Denver"
     click_on "property_state", text: "Colorado"
     fill_in "property_available_rooms", with: 2

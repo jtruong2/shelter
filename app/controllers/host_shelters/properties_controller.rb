@@ -5,15 +5,18 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
   end
 
   def create
-  property = Property.create(safe_params)
-   binding.pry
-   if property.save
-     session[:property_id] = property.id
-     redirect_to root_path
-   else
-     render file: 'public/404.html'
-   end
- end
+    property = current_user.properties.new(safe_params)
+    if property.save
+      session[:property_id] = property.id
+      redirect_to host_shelters_path(property.id)
+    else
+      render file: 'public/404.html'
+    end
+  end
+
+  def show
+    
+  end
 
  private
 
