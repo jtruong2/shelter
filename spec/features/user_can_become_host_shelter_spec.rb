@@ -6,8 +6,6 @@ RSpec.describe "User Can Sign In Through Google" do
 
     stub_omniauth
 
-    stub_omniauth
-
     visit '/'
 
     click_on "Login"
@@ -30,5 +28,13 @@ RSpec.describe "User Can Sign In Through Google" do
     click_on "Create Host Shelter"
 
     expect(current_path).to eq host_shelters_path(Property.last.id)
+  end
+
+  it "Guest_User Can't Sign up as a Host with Out Signing up First" do
+    visit '/'
+
+    click_on "Become Host Shelter"
+
+    expect(current_path).to eq login_path
   end
 end

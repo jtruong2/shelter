@@ -4,7 +4,7 @@ class HostShelters::HostSheltersController < ApplicationController
   def auth_user_check
     unless current_user
        flash[:errors] = "Login Please"
-       render file: 'public/404.html'
+       redirect_to login_path
      end
   end
 end
