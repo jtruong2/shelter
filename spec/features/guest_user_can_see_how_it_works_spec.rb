@@ -12,7 +12,7 @@ RSpec.describe "Guest Visits Home Page" do
 
   it "clicks on about link" do
     visit '/'
-save_and_open_page
+
     click_button "About"
 
     expect(current_path).to eq about_path
@@ -23,7 +23,7 @@ save_and_open_page
   it "clicks on How It Works link" do
     visit '/'
 
-    click_button "How It Works", :first
+    click_button "How It Works"
 
     expect(current_path).to eq info_path
     expect(page).to have_content "For Families and Individuals in Need"
