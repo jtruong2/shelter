@@ -5,8 +5,9 @@ describe WeatherAlertService do
     context ".find_national_alerts" do
       it "finds all national weather alerts" do
           raw_alerts = WeatherAlertService.find_national_alerts
-          raw_alert = raw_alerts[1][:properties] # .first is a test message that is filtered
-                                    # out by the Alert Poro
+          raw_alert = raw_alerts[10][:properties]
+          # .first is a test message that is filtered
+          # out by the Alert Poro
 
           expect(raw_alerts.count).to eq(25)
 
