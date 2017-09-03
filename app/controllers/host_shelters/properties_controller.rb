@@ -1,5 +1,4 @@
 class HostShelters::PropertiesController < HostShelters::HostSheltersController
-  before_action :auth_user_check?
 
   def new
     @property = Property.new
@@ -12,7 +11,7 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
      session[:property_id] = property.id
      redirect_to root_path
    else
-     render file: 404
+     render file: 'public/404.html'
    end
  end
 

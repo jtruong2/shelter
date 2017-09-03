@@ -1,10 +1,10 @@
 class HostShelters::HostSheltersController < ApplicationController
-  helper_method :auth_user_check?
+  before_action :auth_user_check
 
-  def auth_user_check?
+  def auth_user_check
     unless current_user
        flash[:errors] = "Login Please"
-       return false
+       render file: 'public/404.html'
      end
   end
 end
