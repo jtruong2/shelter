@@ -8,7 +8,7 @@ class WeatherAlertService
   end
 
   def find_all_alerts
-    get_url(@base+"alerts/active")
+    get_url(@base+"alerts/active?limit=25")
   end
 
   def get_url(url)

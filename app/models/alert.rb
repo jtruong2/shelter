@@ -6,7 +6,7 @@ class Alert
     @event        = alert_info[:event]
     @headline     = alert_info[:headline]
     @description  = alert_info[:description]
-    @instructions = alert_info[:instructions]
+    @instructions = alert_info[:instruction]
     @severity     = alert_info[:severity]
     @urgency      = alert_info[:urgency]
   end

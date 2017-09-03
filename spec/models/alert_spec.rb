@@ -6,7 +6,7 @@ describe Alert do
       event: "Big Event",
       headline: "Crazy Weather Emergency Coming Your Way",
       description: "lots of rain, thunder and lighting.",
-      instructions: "Stay inside",
+      instruction: "Stay inside",
       severity: "Moderate",
       urgency: "kinda urgent"
     }

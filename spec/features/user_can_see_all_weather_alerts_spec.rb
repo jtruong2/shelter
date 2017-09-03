@@ -6,8 +6,7 @@ describe "User can see all weather alerts" do
     click_on "View Weather Alerts"
     expect(current_path).to eq("/alerts")
 
-    expect(page).to have_css(".alerts")
-    binding.pry
+    expect(page).to have_css(".alert")
 
     within first(".alert") do
       expect(page).to have_css(".event")
