@@ -6,16 +6,26 @@ RSpec.describe "User Can Sign In Through Google" do
 
     stub_omniauth
 
+    stub_omniauth
+
     visit '/'
+
+    click_on "Login"
+
+    expect(current_path).to eq login_path
+
+    click_on "Sign In With Google"
+
+    expect(current_path).to eq root_path
 
     click_on "Become Host Shelter"
 
     expect(current_path).to eq host_shelters_sign_up_path
 
-    fill_in "property[street_address]", with: "123 Circle Drive"
+    fill_in 'property[street_address]', with: "123 Circle Drive"
     fill_in "property_city", with: "Denver"
-    click_on "property_state", text: "Colorado"
-    fill_in "property_available_rooms", with: 2
+    select "Colorado", from: "property_state"
+    fill_in "property_rooms_available", with: 2
 
     click_on "Create Host Shelter"
 
