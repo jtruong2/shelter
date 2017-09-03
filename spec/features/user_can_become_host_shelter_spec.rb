@@ -33,8 +33,6 @@ RSpec.describe "User Can Sign In Through Google" do
   it "Guest_User Can't Sign up as a Host with Out Signing up First" do
     visit '/'
 
-    click_on "Become Host Shelter"
-
-    expect(current_path).to eq login_path
+    expect(page).to_not have_content "Become Host Shelter"
   end
 end
