@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/about', to: 'about#show'
   get '/info', to: 'info#show'
 
+  get '/alerts', to: 'alerts#index'
+
   get '/login', to: 'sessions#new'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/google', as: 'google_login'
