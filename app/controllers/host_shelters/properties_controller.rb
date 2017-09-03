@@ -5,6 +5,7 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
   end
 
   def create
+    current_user.owner!
     property = current_user.properties.new(safe_params)
     if property.save
       session[:property_id] = property.id
@@ -15,7 +16,7 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
   end
 
   def show
-    
+
   end
 
  private

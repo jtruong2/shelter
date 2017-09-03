@@ -7,13 +7,15 @@ RSpec.describe Role, type: :model do
     user = User.create(
         first_name: "Bart",
         last_name: "Starr",
-        email: "bart@starr.com"
+        email: "bart@starr.com",
+        password: 'password'
       )
 
       user_two = User.create(
           first_name: "Tommy",
           last_name: "Armstrong",
-          email: "is@washedout.com"
+          email: "is@washedout.com",
+          password: 'password'
         )
 
     expect(role).to respond_to(:users)

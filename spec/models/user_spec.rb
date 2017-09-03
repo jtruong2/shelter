@@ -1,13 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it "creates a user with an associated role" do
+  before :each do
     Role.create(name: "user")
-    user = User.create(
-        first_name: "Bart",
-        last_name: "Starr",
-        email: "bart@starr.com"
-      )
+  end
+  it "creates a user with an associated role" do
+  user = create(:user)
 
     expect(user).to respond_to(:roles)
     expect(user.roles).to eq User.last.roles
@@ -25,14 +23,14 @@ RSpec.describe User, type: :model do
   end
 
   it "created user can become an owner" do
-    Role.create(name: "user")
     Role.create(name: "owner")
 
     user = User.create(
-        first_name: "Bart",
-        last_name: "Starr",
-        email: "bart@starr.com"
-      )
+      first_name: "Bart",
+      last_name: "Starr",
+      email: "bart@starr.com",
+      password: "password"
+    )
 
     user.owner!
 
@@ -49,4 +47,10 @@ RSpec.describe User, type: :model do
     expect(user.user?).to eq true
     expect(user.owner?).to eq true
   end
+
+  it { is_expected.to validate_presence_of(:first_name) }
+  it { is_expected.to validate_presence_of(:last_name) }
+  it { is_expected.to validate_presence_of(:email) }
+  it { is_expected.to validate_uniqueness_of(:email) }
+
 end
