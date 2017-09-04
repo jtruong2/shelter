@@ -15,8 +15,8 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
     end
   end
 
-  def show
-
+  def index
+    @properties = current_user.properties
   end
 
  private
