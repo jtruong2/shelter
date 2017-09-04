@@ -5,10 +5,6 @@ RSpec.describe "User Can Sign In And Out Through Google" do
     Role.create(name: "user")
     user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).
-    and_return(user)
-
-
     visit '/'
 
     click_on "Manual"
@@ -20,7 +16,9 @@ RSpec.describe "User Can Sign In And Out Through Google" do
     expect(page).to have_content "Welcome, #{user.email}"
     expect(page).to_not have_content "Login"
 
-    click_on "Logout"
+    expect(page).to have_content "Logout"
+
+    find('.logout-button').click
 
     expect(current_path).to eq root_path
     expect(page).to_not have_content "Welcome, #{user.email}"
