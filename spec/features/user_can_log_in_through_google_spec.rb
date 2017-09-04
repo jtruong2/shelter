@@ -20,7 +20,7 @@ RSpec.describe "User Can Sign In And Out Through Google" do
     expect(page).to have_content "Welcome, #{user.email}"
     expect(page).to_not have_content "Login"
 
-    click_on 'Logout'
+    click_on "Logout"
 
     expect(current_path).to eq root_path
     expect(page).to_not have_content "Welcome, #{user.email}"
