@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :user do
-    Role.create(name: 'user')
     # uid "MyString"
     first_name "Samuel"
     last_name "L. Homie"
