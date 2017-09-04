@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(safe_params)
+    binding.pry
     if user.save
       session[:user_id] = user.id
       redirect_to root_path
