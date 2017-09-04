@@ -22,6 +22,9 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
  private
 
   def safe_params
-   params.require(:property).permit(:street_address, :city, :state, :rooms_available)
+   params.require(:property).permit( :street_address,
+                                     :city,
+                                     :state,
+                                     :rooms_available)
   end
 end

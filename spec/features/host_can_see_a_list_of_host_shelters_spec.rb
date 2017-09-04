@@ -9,12 +9,14 @@ RSpec.describe "Host Shelter Owner Can" do
   end
 
   it "Sees a list of their properties at the Properties Index Page" do
-    @user.properties.create(street_address: "123 Circle Dr",
-                                     city: "Denver",
-                                    state: "Colorado",
-                          rooms_available: 2
-                                     )
+
+    @user.properties.create(:street_address => "123 Circle Dr",
+                            :city => "Denver",
+                            :state => "Colorado",
+                            :rooms_available => 2)
+
     @user.owner!
+
    allow_any_instance_of(ApplicationController).to receive(:current_user).
    and_return(@user)
 

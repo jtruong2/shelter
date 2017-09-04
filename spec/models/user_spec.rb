@@ -26,10 +26,10 @@ RSpec.describe User, type: :model do
     Role.create(name: "owner")
 
     user = User.create(
-      first_name: "Bart",
-      last_name: "Starr",
-      email: "bart@starr.com",
-      password: "password"
+      :first_name => "Bart",
+      :last_name => "Starr",
+      :email => "bart@starr.com",
+      :password => "password"
     )
 
     user.owner!
