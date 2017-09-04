@@ -20,7 +20,6 @@ RSpec.describe "Host Shelter Owner Can" do
 
    visit '/host_shelters/properties'
 
-   save_and_open_page
    expect(@user.owner?).to eq true
    expect(current_path).to eq host_shelters_properties_path
    expect(page).to have_content @user.properties.first.street_address
