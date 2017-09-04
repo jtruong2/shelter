@@ -19,6 +19,11 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
     @properties = current_user.properties
   end
 
+  def show
+    property_owner(property_id_params)
+    @property = Property.find(property_id_params)
+  end
+
  private
 
   def safe_params
@@ -26,5 +31,9 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
                                      :city,
                                      :state,
                                      :rooms_available)
+  end
+
+  def property_id_params
+    params[:id]
   end
 end
