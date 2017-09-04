@@ -38,4 +38,10 @@ RSpec.describe "User Can Sign In Through Google" do
 
     expect(page).to_not have_content "Become Host Shelter"
   end
+
+  it "Guest_User Can't Sign up as a Host with Out Signing up First" do
+    visit '/host_shelters/sign_up'
+
+    expect(page).to_not have_content "Page Not Found"
+  end
 end
