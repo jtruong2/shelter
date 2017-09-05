@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   get '/auth/google', as: 'google_login'
   delete '/logout', to: 'sessions#destroy'
   resources :users, only: [:new, :create]
+
+  get 'users/verify', to: 'users#show_verify', as: 'verify'
+  post 'users/verify'
+  post 'users/resend'
+
 end
