@@ -5,6 +5,7 @@ FactoryGirl.define do
     last_name "L. Homie"
     email "i_need_a_homie@netscape.com"
     password "password"
+    phone_number 1234567890
     # token "MyString"
     # image "MyString"
   end
