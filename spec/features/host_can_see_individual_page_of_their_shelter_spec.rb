@@ -8,11 +8,11 @@ RSpec.describe "Host Shelter Owner Can" do
     @user = create(:user)
   end
 
-  it "Sees a list of their properties at the Properties Index Page" do
+  it "Sees a list of their properties at the Properties Show Page" do
 
-    property = @user.properties.create(:street_address => "123 Circle Dr",
+    property = @user.properties.create!(:street_address => "1701 Bryant St",
                             :city => "Denver",
-                            :state => "Colorado",
+                            :state => "CO",
                             :rooms_available => 2)
 
     @user.owner!
