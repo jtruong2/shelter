@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+def seed_roles
+  Role.create(name: "user")
+  Role.create(name: "owner")
+  Role.create(name: "platform_admin")
+end
+
+seed_roles

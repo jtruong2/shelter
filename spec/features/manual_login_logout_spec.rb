@@ -1,6 +1,7 @@
 require 'rails_helper'
 RSpec.describe "User can create an account for manual login" do
   it "creates a manual login" do
+    Role.create(name: 'user')
     user = build(:user)
 
     visit '/'
@@ -21,6 +22,7 @@ RSpec.describe "User can create an account for manual login" do
   end
 
   it "logs into account with valid credentials and logs out" do
+    Role.create(name: 'user')
     user = create(:user)
 
     visit '/'
