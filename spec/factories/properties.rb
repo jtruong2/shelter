@@ -1,8 +1,9 @@
-# FactoryGirl.define do
-#   factory :property do
-#     street_address "MyString"
-#     city "MyString"
-#     state "MyString"
-#     rooms_available 1
-#   end
-# end
+FactoryGirl.define do
+  factory :property do
+    street_address "2001 Blake St"
+    city "Denver"
+    state "CO"
+    rooms_available 1
+    user
+  end
+end
