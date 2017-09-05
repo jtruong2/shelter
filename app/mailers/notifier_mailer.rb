@@ -4,6 +4,5 @@ class NotifierMailer < ApplicationMailer
   def welcome(user)
     @account = user
     mail(to: user.email) do |format|
-      
   end
 end

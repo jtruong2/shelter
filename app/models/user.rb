@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_secure_password
   validates_confirmation_of :password
   validates :password, :presence => true, :confirmation => true
@@ -7,6 +6,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
+
 
 
   def self.from_omniauth(auth)
@@ -17,7 +17,7 @@ class User < ApplicationRecord
       user.email = auth["info"]["email"]
       user.image = auth["info"]["image"]
       user.token = auth["credentials"]["token"]
-      user.password = "password"
+      user.password = "myshelterpassword"
     end
   end
 end
