@@ -17,4 +17,11 @@ class Alert
       new(api_alert[:properties])
     end
   end
+
+  def self.find_by(state)
+    api_alerts = WeatherAlertService.find_alerts_for(state)
+    api_alerts.map do |api_alert|
+      new(api_alert[:properties])
+    end
+  end
 end
