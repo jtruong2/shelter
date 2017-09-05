@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   get '/alerts', to: 'alerts#index'
 
   get '/login', to: 'sessions#new'
-  get '/auth/:provider/callback', to: 'sessions#create'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  get '/auth/google/callback', to: 'sessions#create'
   get '/auth/google', as: 'google_login'
   delete '/logout', to: 'sessions#destroy'
+  resources :users, only: [:new, :create]
 end
