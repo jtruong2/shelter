@@ -16,4 +16,8 @@ class Property < ApplicationRecord
   def latitude_look_up
     self.latitude = Geocoder.coordinates(self.address).first
   end
+
+  def coordinates
+    [self.latitude, self.longitude]
+  end
 end
