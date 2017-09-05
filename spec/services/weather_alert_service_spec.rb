@@ -32,7 +32,7 @@ describe WeatherAlertService do
     end
 
     context ".find_alerts_for(state)" do
-      it "finds all national weather alerts" do
+      it "finds all state weather alerts" do
         VCR.use_cassette("services/texas_alerts") do
           raw_alerts = WeatherAlertService.find_alerts_for("TX")
           raw_alert = raw_alerts[9][:properties]

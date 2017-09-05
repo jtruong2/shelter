@@ -20,12 +20,12 @@ class WeatherAlertService
     get_url(base+"alerts/active/area/#{state}?limit=20")
   end
 
+  private
+
   def get_url(url)
     response = Faraday.get(url)
     JSON.parse(response.body, symbolize_names: true)[:features]
   end
-
-  private
 
   attr_reader :base, :state
 
