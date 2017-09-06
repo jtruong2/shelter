@@ -8,10 +8,6 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'mail'
 
-Mail.defaults do
-  delivery_method :test
-end
-
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
