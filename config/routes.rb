@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     get '/:id', to: 'properties#show'
   end
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    resources :properties, only: [:index]
+  end
 
 end

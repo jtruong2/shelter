@@ -17,6 +17,7 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
 
   def index
     @properties = current_user.properties
+    binding.pry
   end
 
   def show

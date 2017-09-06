@@ -1,8 +1,29 @@
 <ul>
   <% @properties.each do |property| %>
-    <li><%= property.street_address %></li>
-    <li><%= property.city %></li>
-    <li><%= property.state %></li>
-    <li><%= property.rooms_available %></li>
+    <% if property.status == "approved" %>
+      <h2>Approved</h2>
+      <li class="approved">
+        <%= property.name %></br>
+        <%= property.street_address %></br>
+        <%= property.city %>, <%= property.state %></br>
+        <%= property.rooms_available %>
+      </li>
+    <% elsif property.status == "pending" %>
+      <h2>Pending</h2>
+      <li class="pending">
+        <%= property.name %></br>
+        <%= property.street_address %></br>
+        <%= property.city %>, <%= property.state %></br>
+        <%= property.rooms_available %>
+      </li>
+    <% elsif property.status == "complete" %>
+      <h2>Complete</h2>
+      <li class="complete">
+        <%= property.name %></br>
+        <%= property.street_address %></br>
+        <%= property.city %>, <%= property.state %></br>
+        <%= property.rooms_available %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
