@@ -3,7 +3,9 @@ FactoryGirl.define do
     # uid "MyString"
     first_name "Samuel"
     last_name "L. Homie"
-    email "i_need_a_homie@netscape.com"
+    sequence :email  do |i|
+      "i_need_a_homi#{i}e@netscape.com"
+    end
     password "password"
     # token "MyString"
     # image "MyString"

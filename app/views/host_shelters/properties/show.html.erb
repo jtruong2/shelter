@@ -7,3 +7,8 @@
   <%= @property.longitude %>
   <%= @property.rooms_available %>
 </ul>
+
+<%= form_tag host_shelters_property_directions_path(property_id: @property.id), method: :get do %>
+  <%= text_field_tag :my_local, "My Address" %>
+  <%= submit_tag "Take Me to the Homies"%>
+<% end %>

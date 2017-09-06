@@ -43,6 +43,6 @@ class User < ApplicationRecord
   private
 
   def user_role_create
-    self.roles << Role.find_by(name: "user")
+    self.roles << (Role.find_by(name: "user"))
   end
 end

@@ -20,7 +20,7 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
   end
 
   def show
-    property_owner(property_id_params)
+    auth_user_check
     @property = Property.find(property_id_params)
   end
 
