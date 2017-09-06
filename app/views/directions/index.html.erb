@@ -1,0 +1,13 @@
+<%= @direction.duration %>
+<%= @direction.distance %>
+<%= @direction.start_address %>
+<%= @direction.end_address %>
+
+<p><%= @direction.steps.count %> Steps </p>
+<% @direction.steps.each do |step| %>
+  <ul class="direction">
+    <li class="instruction"><%= step.html_instructions %></li>
+    <li class="distance"><%= step.approx_distance %></li>
+    <li class="duration"><%= step.approx_duration %></li>
+  </ul>
+<%  end %>
