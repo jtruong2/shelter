@@ -22,8 +22,6 @@ class Property < ApplicationRecord
   end
 
   def self.all_coordinates
-    all_coordinates = []
-    all.each {|property| all_coordinates << [property.latitude, property.longitude]}
-    all_coordinates
+    all.map {|property| property = [property.latitude, property.longitude]}
   end
 end
