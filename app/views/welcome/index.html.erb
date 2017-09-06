@@ -12,24 +12,31 @@ Please click one of the options below to log in.</h1>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["API_KEY"] %>&callback=initMap"
   type="text/javascript"></script>
 <script type="text/javascript">
+
 function initMap() {
-        var uluru = {lat: 39.51293, lng: -105.4002};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-        <% @properties.each do |property| %>
-          var marker = new google.maps.Marker({
-            position: {lat: <%= property.latitude %>, lng: <%= property.longi %>}
-          });
-        <% end %>
-        marker.setMap(map);
-      }
+  var uluru = {lat: 39.51293, lng: -105.4002};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: uluru
+  });
+
+  setMarkers(map);
+  }
+
+var properties = <%= @all_coordinates %>;
+
+function setMarkers(map) {
+  for (var i = 0; i < properties.length; i++) {
+    var property = properties[i];
+    var marker = new google.maps.Marker({
+      position: {lat: property[0], lng: property[1]},
+      map: map
+    });
+  }
+}
 </script>
+
 <section class="tiles">
   <article class="style1">
     <span class="image">

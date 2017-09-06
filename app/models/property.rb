@@ -20,4 +20,10 @@ class Property < ApplicationRecord
   def coordinates
     [self.latitude, self.longitude]
   end
+
+  def self.all_coordinates
+    all_coordinates = []
+    all.each {|property| all_coordinates << [property.latitude, property.longitude]}
+    all_coordinates
+  end
 end
