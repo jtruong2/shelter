@@ -7,5 +7,17 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     :image_aspect_ratio => "square",
     :image_size => 50,
     :access_type => 'offline'
+  },
+  provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'],
+  scope: 'email,public_profile', display: 'popup'
+
+  provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"],
+  {
+    :name => "google",
+    :scope => ['contacts','plus.login','plus.me', 'userinfo.email'],
+    :prompt => "select_account",
+    :image_aspect_ratio => "square",
+    :image_size => 50,
+    :access_type => 'offline'
   }
 end

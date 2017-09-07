@@ -1,7 +1,6 @@
-
 require 'rails_helper'
 
-RSpec.describe "User Facebook OAuth Process" do
+RSpec.describe "User Can Sign In And Out Through Facebook" do
 
   before(:each) do
     stub_omniauth
@@ -9,17 +8,11 @@ RSpec.describe "User Facebook OAuth Process" do
 
   it "guest can create an account" do
 
-    visit '/'
+    visit facebook_login_path
 
-    click_on '/auth/facebook'
-    # visit facebook_login_path
-
-    expect(page).to have_field("user[first_name]", with: 'Mark')
+    expect(page).to have_field("user[first_name]", with: 'Mark`')
     expect(page).to have_field("user[last_name]", with: 'Van Akkeren')
     expect(page).to have_field('user[email]', with: 'markavan@hotmail.com')
-
-    # fill_in "user[zipcode]", with: "80305"
-    # fill_in "user[phone_number]", with: "1234567890"
 
     click_on "Create Account"
 
@@ -35,7 +28,8 @@ RSpec.describe "User Facebook OAuth Process" do
 
     latest_user = User.last
 
-    expect(latest_user.first_name).to eq("Riley")
-    expect(latest_user.email).to eq("rileyt_111@hotmail.com")
+    expect(latest_user.first_name).to eq("Mark")
+    expect(latest_user.email).to eq("markavan@hotmail.com")
+
   end
 end
