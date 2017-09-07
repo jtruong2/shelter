@@ -13,7 +13,7 @@ FactoryGirl.define do
     password "password"
     # token "MyString"
     # image "MyString"
-    
+
     factory :user_with_user_role do
       before(:create) do |user|
         create(:role, name: "user", users: [user])
@@ -33,7 +33,7 @@ FactoryGirl.define do
       after(:create) do |user|
         create(:property, :user => user)
       end
-      
+
       after(:create) do |user|
         create(:property, :user => user)
       end

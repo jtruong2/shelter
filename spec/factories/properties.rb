@@ -1,10 +1,8 @@
  FactoryGirl.define do
    factory :property do
-     sequence :street_address do |x|
-      "#{x} Sesame Street"
-     end
-     city "Gotham City"
-     state "MN"
+     street_address "1060 W Addison St"
+     city "Chicago"
+     state "IL"
      rooms_available 1
      user
 

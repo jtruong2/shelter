@@ -18,10 +18,10 @@ def seed_users
   user4 = User.create(first_name: "John", last_name: "Elway", email: "football3@email.com", password: "broncos")
   user1.roles << Role.find_by(name: "user")
   user1.roles << Role.find_by(name: "owner")
-  user2.roles << Role.find_by(name: "user") 
+  user2.roles << Role.find_by(name: "user")
   user3.roles << Role.find_by(name: "user")
   user4.roles << Role.find_by(name: "user")
-end 
+end
 
 def seed_properties
   Property.create(street_address: "1 E 161st St", city: "Bronx", state: "NY", rooms_available: 100, user_id: 1)

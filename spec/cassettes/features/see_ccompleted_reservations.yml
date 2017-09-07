@@ -1,0 +1,227 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1060%20W%20Addison%20St,%20Chicago,%20IL&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 19:17:18 GMT
+      Expires:
+      - Fri, 08 Sep 2017 19:17:18 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '542'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '880'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1060",
+                       "short_name" : "1060",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "West Addison Street",
+                       "short_name" : "W Addison St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Lake View",
+                       "short_name" : "Lake View",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chicago",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "60613",
+                       "short_name" : "60613",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1060 W Addison St, Chicago, IL 60613, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 41.9474536,
+                       "lng" : -87.6561341
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.9488025802915,
+                          "lng" : -87.65478511970851
+                       },
+                       "southwest" : {
+                          "lat" : 41.9461046197085,
+                          "lng" : -87.65748308029151
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJId-a5bLTD4gRUkQO01DJTzA",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 19:31:58 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1060%20W%20Addison%20St,%20Chicago,%20IL&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 19:17:18 GMT
+      Expires:
+      - Fri, 08 Sep 2017 19:17:18 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '542'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '880'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1060",
+                       "short_name" : "1060",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "West Addison Street",
+                       "short_name" : "W Addison St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Lake View",
+                       "short_name" : "Lake View",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Chicago",
+                       "short_name" : "Chicago",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Cook County",
+                       "short_name" : "Cook County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Illinois",
+                       "short_name" : "IL",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "60613",
+                       "short_name" : "60613",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1060 W Addison St, Chicago, IL 60613, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 41.9474536,
+                       "lng" : -87.6561341
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.9488025802915,
+                          "lng" : -87.65478511970851
+                       },
+                       "southwest" : {
+                          "lat" : 41.9461046197085,
+                          "lng" : -87.65748308029151
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJId-a5bLTD4gRUkQO01DJTzA",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 19:31:58 GMT
+recorded_with: VCR 3.0.3
