@@ -1,0 +1,8 @@
+<% @properties.each do |property| %>
+  <%= property.street_address %><br/>
+  <%= property.city %>, <%= property.state %>
+  <p>Rooms available: <%= property.rooms_available %></p>
+<% end %>
+<% if @properties.blank? %>
+  <p>There are no homes that match your search</p>
+<% end %>

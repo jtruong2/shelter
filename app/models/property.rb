@@ -26,4 +26,9 @@ class Property < ApplicationRecord
   def self.all_coordinates
     all.map {|property| property = [property.latitude, property.longitude]}
   end
+
+  def self.search(location)
+    location = location[:search]
+    where("street_address ILIKE ? OR city ILIKE ? OR state ILIKE ?", "%#{location}%", "%#{location}%", "%#{location}%")
+  end
 end
