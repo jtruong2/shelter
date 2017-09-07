@@ -1,0 +1,1383 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weather.gov/alerts/active?limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Type:
+      - application/geo+json
+      X-Powered-By:
+      - PHP/5.6.25
+      Cache-Control:
+      - max-age=120, public, s-maxage=120
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Server-Id:
+      - vm-bldr-nids-apiapp235.ncep.noaa.gov
+      X-Correlation-Id:
+      - 750018f9-320f-468c-bbde-687e42d13c53
+      X-Request-Id:
+      - 750018f9-320f-468c-bbde-687e42d13c53
+      Date:
+      - Tue, 05 Sep 2017 18:14:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - Transfer-Encoding
+      - keep-alive
+      Vary:
+      - Accept
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "@context": [
+                "https://raw.githubusercontent.com/geojson/geojson-ld/master/contexts/geojson-base.jsonld",
+                {
+                    "wx": "https://api.weather.gov/ontology#",
+                    "@vocab": "https://api.weather.gov/ontology#"
+                }
+            ],
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512018",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512018",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512018",
+                        "areaDesc": "Central Interior; Culebra; Southwest; St Croix; Mayaguez and Vicinity; Vieques; Western Interior; Northeast; Eastern Interior; Northwest; Ponce and Vicinity; St.Thomas...St. John.. and Adjacent Islands; San Juan and Vicinity; North Central; Southeast",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ006",
+                                "PRZ012",
+                                "PRZ011",
+                                "VIZ002",
+                                "PRZ010",
+                                "PRZ013",
+                                "PRZ009",
+                                "PRZ002",
+                                "PRZ004",
+                                "PRZ008",
+                                "PRZ007",
+                                "VIZ001",
+                                "PRZ001",
+                                "PRZ005",
+                                "PRZ003"
+                            ],
+                            "SAME": [
+                                "072009",
+                                "072019",
+                                "072039",
+                                "072043",
+                                "072047",
+                                "072073",
+                                "072101",
+                                "072105",
+                                "072107",
+                                "072149",
+                                "072049",
+                                "072079",
+                                "072055",
+                                "072023",
+                                "078010",
+                                "072003",
+                                "072011",
+                                "072067",
+                                "072097",
+                                "072099",
+                                "072117",
+                                "072125",
+                                "072147",
+                                "072001",
+                                "072081",
+                                "072083",
+                                "072093",
+                                "072121",
+                                "072131",
+                                "072141",
+                                "072029",
+                                "072037",
+                                "072053",
+                                "072069",
+                                "072087",
+                                "072089",
+                                "072103",
+                                "072119",
+                                "072007",
+                                "072025",
+                                "072035",
+                                "072041",
+                                "072045",
+                                "072063",
+                                "072077",
+                                "072085",
+                                "072129",
+                                "072005",
+                                "072027",
+                                "072065",
+                                "072071",
+                                "072115",
+                                "072059",
+                                "072075",
+                                "072111",
+                                "072113",
+                                "072133",
+                                "072153",
+                                "078030",
+                                "078020",
+                                "072021",
+                                "072031",
+                                "072033",
+                                "072061",
+                                "072127",
+                                "072135",
+                                "072137",
+                                "072139",
+                                "072013",
+                                "072017",
+                                "072051",
+                                "072054",
+                                "072091",
+                                "072143",
+                                "072145",
+                                "072015",
+                                "072057",
+                                "072095",
+                                "072109",
+                                "072123",
+                                "072151"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:11:40+00:00",
+                        "effective": "2017-09-05T18:11:40+00:00",
+                        "onset": "2017-09-05T18:11:00+00:00",
+                        "expires": "2017-09-06T02:15:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "Tropical Cyclone Statement",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Tropical Cyclone Statement issued September 5 at 2:11PM AST by NWS San Juan PR",
+                        "description": "This product covers PUERTO RICO AND THE US VIRGIN ISLANDS\n\n**POTENTIALLY CATASTROPHIC CATEGORY 5 HURRICANE IRMA HEADING TOWARD THE\nLEEWARD ISLANDS**\n\nNEW INFORMATION\n---------------\n\n* CHANGES TO WATCHES AND WARNINGS:\n- None\n\n* CURRENT WATCHES AND WARNINGS:\n- A Hurricane Warning is in effect for Central Interior, Culebra,\nEastern Interior, Mayaguez and Vicinity, North Central,\nNortheast, Northwest, Ponce and Vicinity, San Juan and\nVicinity, Southeast, Southwest, St Croix, St.Thomas...St.\nJohn...and Adjacent Islands, Vieques, and Western Interior\n\n* STORM INFORMATION:\n- About 470 miles east-southeast of San Juan PR or about 400\nmiles east-southeast of Saint Thomas VI\n- 16.9N 59.1W\n- Storm Intensity 185 mph\n- Movement West or 275 degrees at 14 mph\n\nSITUATION OVERVIEW\n------------------\n\nIrma has increased in strength to Category 5 with winds of 185 mph and\nis expected to continue as a potentially catastrophic hurricane as it\napproaches Puerto Rico and the U.S Virgin Islands late Wednesday\nmorning. Irma is forecast to move northeast of the local islands, but\nthrough the local outer Atlantic waters Wednesday afternoon through\nearly Thursday Morning. Irma is expected cause dangerous winds, storm\nsurge, rip currents and rainfall impacts across the local islands.\nHurricane force wind gusts are possible across the Northern U.S. Virgin\nIslands, Culebra, Vieques and Northeast Puerto Rico with strong\ntropical force winds likely. The rest of the area is likely to\nexperience tropical storm force winds. Wind gusts with hurricane force\nwind are likely at higher elevations. Rainfall accumulations between 4\nto 8 inches with isolated amounts over 12 are likely Wednesday through\nFriday.\n\nPOTENTIAL IMPACTS\n-----------------\n\n* WIND:\nProtect against life-threatening wind having possible catastrophic\nimpacts across the across the northern U.S. Virgin Islands, Culebra and\nthe northeast quadrant of Puerto Rico. Potential impacts in this area\ninclude:\n- Structural damage to sturdy buildings, some with complete roof\nand wall failures. Complete destruction of mobile homes. Damage\ngreatly accentuated by large airborne projectiles. Locations\nmay be uninhabitable for weeks or months.\n- Numerous large trees snapped or uprooted along with fences and\nroadway signs blown over.\n- Many roads impassable from large debris, and more within urban\nor heavily wooded places. Many bridges, causeways, and access\nroutes impassable.\n- Widespread power and communications outages.\n\nAlso, protect against life-threatening wind having possible extensive\nimpacts across all islands.\n\n* FLOODING RAIN:\nProtect against life-threatening rainfall flooding having possible\nextensive impacts across all the islands. Potential impacts include:\n- Major rainfall flooding may prompt many evacuations and rescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos, and\nditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides. Flood\ncontrol systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or washed\naway. Many places where flood waters may cover escape routes.\nStreets and parking lots become rivers of moving water with\nunderpasses submerged. Driving conditions become dangerous.\nMany road and bridge closures with some weakened or washed out.\n\nProtect against dangerous rainfall flooding having possible\nsignificant impacts across all impacts.\n\n* SURGE:\nProtect against life-threatening surge having possible devastating\nimpacts across all islands. Potential impacts in this area include:\n- Widespread deep inundation, with storm surge flooding greatly\naccentuated by powerful battering waves. Structural damage to\nbuildings, with many washing away. Damage greatly compounded\nfrom considerable floating debris. Locations may be\nuninhabitable for an extended period.\n- Near-shore escape routes and secondary roads washed out or\nseverely flooded. Flood control systems and barriers may become\nstressed.\n- Extreme beach erosion. New shoreline cuts possible.\n- Massive damage to marinas, docks, boardwalks, and piers.\nNumerous small craft broken away from moorings with many lifted\nonshore and stranded.\n\nAlso, protect against life-threatening surge having possible\nsignificant to extensive impacts across all the islands.\n\nAlso, protect against locally hazardous surge having possible limited\nimpacts across .\n\n* TORNADOES:\nProtect against a tornado event having possible limited impacts\nacross PUERTO RICO AND THE US VIRGIN ISLANDS. Potential impacts\ninclude:\n- The occurrence of isolated tornadoes can hinder the execution\nof emergency plans during tropical events.\n- A few places may experience tornado damage, along with power\nand communications disruptions.\n- Locations could realize roofs peeled off buildings, chimneys\ntoppled, mobile homes pushed off foundations or overturned,\nlarge tree tops and branches snapped off, shallow-rooted trees\nknocked over, moving vehicles blown off roads, and small boats\npulled from moorings.",
+                        "instruction": "* EVACUATIONS:\nWATCH/WARNING PHASE - For those under evacuation orders, leave as soon\nas practical with a destination in mind. Gas up your vehicle well\nahead of time. Be sure that you take all essential materials from your\nemergency supplies kit. Let others know where you are going and when\nyou intend to arrive.\n\nWATCH/WARNING PHASE - If evacuating the area, stick to prescribed\nevacuation routes. Look for additional traffic information on roadway\nsmart signs and listen to select radio channels for further travel\ninstructions. Drivers should not use cell phones while operating\nvehicles.\n\nWATCH/WARNING PHASE - For those not under evacuation orders,\nunderstand that there are inherent risks to evacuation (such as\ntraffic congestion, accidents, and driving in bad weather), so\nevacuate only if necessary. Help keep roadways open for those that\nare under evacuation orders.\n\nWATCH/WARNING PHASE - If you are exceptionally vulnerable to wind or\nwater hazards from tropical systems, consider voluntary evacuation,\nespecially if being officially recommended. Relocate to a\npredetermined shelter or safe destination.\n\nWATCH/WARNING PHASE - If evacuating away from the area or relocating\nto a nearby shelter, leave early before weather conditions become\nhazardous.\n\nIMMINENT/ONGOING PHASE - Do not return to evacuated areas until\nhazardous winds diminish and flood waters abate.\n\nRECOVERY PHASE - Do not return to evacuated areas until it is safe.\nListen for the all-clear signal from local authorities.\n\n* OTHER PREPAREDNESS INFORMATION:\nNow is the time to bring to completion all preparations to protect\nlife and property in accordance with your emergency plan.\n\nOutside preparations should be wrapped up as soon as possible before\nweather conditions completely deteriorate. Any remaining evacuations\nand relocations should be expedited before the onset of tropical\nstorm force wind.\n\nIf you are relocating to safe shelter, leave as early as possible. If\nheading to a community shelter, become familiar with the shelter\nrules before arrival, especially if you have special needs or own a\npet. Take essential items with you from your Emergency Supplies Kit.\nCheck the latest weather forecast before departing.\n\nFailure to adequately shelter may result in serious injury or loss of\nlife. Always heed the advice of local officials and comply with any\norders that are issued. Remember, during the storm 9 1 1 Emergency\nServices may not be able to immediately respond if conditions are\nunsafe. This should be a big factor in your decision making.\n\nCheck-in with your emergency points of contact among family, friends,\nand workmates. Inform them of your status and well-being. Let them\nknow how you intend to ride out the storm and when you plan to\ncheck-in again.\n\nKeep cell phones well charged and handy. Also, cell phone chargers\nfor automobiles can be helpful after the storm. Locate your chargers\nand keep them with your cell phone.\n\nIn emergencies it is best to remain calm. Stay informed and focused\non the situation at hand. Exercise patience with those you encounter.\nBe a Good Samaritan and helpful to others.\n\nIf relocating to a nearby shelter or to the home of a family member\nor friend, drive with extra caution, especially on secondary roads.\nRemember, many bridges and causeways will be closed once higher winds\narrive. Also, if you encounter water covering the road, seek an\nalternate route. Always obey official road signs for closures and\ndetours.\n\nIf you are a visitor and still in the area, listen for the name of\nthe city or town in which you are staying within local news updates.\nBe sure you know the name of the county or parish in which it\nresides. Pay attention for instructions from local authorities.\n\nClosely monitor NOAA Weather radio or other local news outlets for\nofficial storm information. Be ready to adapt to possible changes to\nthe forecast.\n\n* ADDITIONAL SOURCES OF INFORMATION:\n- For information on appropriate preparations see ready.gov\n- For information on creating an emergency plan see getagameplan.org\n- For additional disaster preparedness information see redcross.org",
+                        "response": "Monitor",
+                        "parameters": {
+                            "NWSheadline": [
+                                "POTENTIALLY CATASTROPHIC CATEGORY 5 HURRICANE IRMA HEADING TOWARD THE\n LEEWARD ISLANDS"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUHLSSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512016-2343339",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512016-2343339",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512016-2343339",
+                        "areaDesc": "Upper Koyukuk Valley",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ219"
+                            ],
+                            "SAME": [
+                                "002188",
+                                "002290"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:10:40+00:00",
+                        "effective": "2017-09-05T18:10:40+00:00",
+                        "onset": "2017-09-06T08:00:00+00:00",
+                        "expires": "2017-09-06T14:00:00+00:00",
+                        "ends": "2017-09-06T20:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "Wind Advisory",
+                        "sender": "NWS Fairbanks AK",
+                        "headline": "Wind Advisory issued September 5 at 10:10AM AKDT expiring September 6 at 12:00PM AKDT by NWS Fairbanks AK",
+                        "description": "The National Weather Service in Fairbanks has issued a Wind\nAdvisory, which is in effect from midnight tonight to noon AKDT\nWednesday.\n\n* LOCATION...Summits east of Allakaket.\n\n* WINDS...East 15 to 25 mph with gusts to 40 mph.\n\n* TIMING...Winds will increase late this evening and will peak\nearly Wednesday morning. Winds start to decrease late Wednesday\nmorning.",
+                        "instruction": "A Wind Advisory means that strong winds are occurring or\nexpected. Travel may be difficult. Secure loose objects which may\nbe blown about by the wind.",
+                        "response": "Execute",
+                        "parameters": {
+                            "NWSheadline": [
+                                "WIND ADVISORY IN EFFECT FROM MIDNIGHT TONIGHT TO NOON AKDT WEDNESDAY"
+                            ],
+                            "VTEC": [
+                                "/O.NEW.PAFG.WI.Y.0034.170906T0800Z-170906T2000Z/"
+                            ],
+                            "PIL": [
+                                "AFGNPWAFG"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-06T20:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512014-2343337",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512014-2343337",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512014-2343337",
+                        "areaDesc": "Deltana and Tanana Flats",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ223"
+                            ],
+                            "SAME": [
+                                "002068",
+                                "002090",
+                                "002240",
+                                "002290"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:10:40+00:00",
+                        "effective": "2017-09-05T18:10:40+00:00",
+                        "onset": "2017-09-06T06:00:00+00:00",
+                        "expires": "2017-09-06T14:00:00+00:00",
+                        "ends": "2017-09-07T06:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "High Wind Warning",
+                        "sender": "NWS Fairbanks AK",
+                        "headline": "High Wind Warning issued September 5 at 10:10AM AKDT expiring September 6 at 10:00PM AKDT by NWS Fairbanks AK",
+                        "description": "The National Weather Service in Fairbanks has issued a High Wind\nWarning, which is in effect from 10 PM this evening to 10 PM AKDT\nWednesday. The Wind Advisory is no longer in effect.\n\n* LOCATION...From Delta Junction South.\n\n* WINDS...South winds 25 to 35 mph with gusts to 70 mph.\n\n* TIMING...Winds will begin to increase late this evening and\nwill peak during the day on Wednesday. Winds will start to drop\nearly Wednesday evening.",
+                        "instruction": "A High Wind Warning means hazardous high winds are occurring or\nexpected. Take precautions to protect life and prevent property\ndamage.",
+                        "response": "Prepare",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HIGH WIND WARNING IN EFFECT FROM 10 PM THIS EVENING TO 10 PM AKDT WEDNESDAY"
+                            ],
+                            "VTEC": [
+                                "/O.EXA.PAFG.HW.W.0007.170906T0600Z-170907T0600Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "AFGNPWAFG"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-07T06:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512015-2343338",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512015-2343338",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512015-2343338",
+                        "areaDesc": "Eastern Alaska Range",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ226"
+                            ],
+                            "SAME": [
+                                "002068",
+                                "002170",
+                                "002240",
+                                "002261"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511759-2343149",
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511759-2343148"
+                        ],
+                        "sent": "2017-09-05T18:10:40+00:00",
+                        "effective": "2017-09-05T18:10:40+00:00",
+                        "onset": "2017-09-06T06:00:00+00:00",
+                        "expires": "2017-09-06T14:00:00+00:00",
+                        "ends": "2017-09-07T06:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "High Wind Warning",
+                        "sender": "NWS Fairbanks AK",
+                        "headline": "High Wind Warning issued September 5 at 10:10AM AKDT expiring September 6 at 10:00PM AKDT by NWS Fairbanks AK",
+                        "description": "* LOCATION...Alaska Range Passes.\n\n* WINDS...South winds 35 to 45 mph with gusts to 75 mph.\n\n* TIMING...Winds will begin to increase late this evening and\nwill peak during the day on Wednesday. Winds will start to drop\nWednesday evening.\n\n* IMPACTS...Strong winds will make travel difficult. Loose\nobjects will be blown around.",
+                        "instruction": "A High Wind Warning means hazardous high winds are occurring or\nexpected. Take precautions to protect life and prevent property\ndamage.",
+                        "response": "Prepare",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HIGH WIND WARNING REMAINS IN EFFECT FROM 10 PM THIS EVENING TO 10 PM AKDT WEDNESDAY"
+                            ],
+                            "VTEC": [
+                                "/O.CON.PAFG.HW.W.0007.170906T0600Z-170907T0600Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "AFGNPWAFG"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-07T06:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512013-2343335",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512013-2343335",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512013-2343335",
+                        "areaDesc": "Denali",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ225"
+                            ],
+                            "SAME": [
+                                "002068"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511760-2343150"
+                        ],
+                        "sent": "2017-09-05T18:10:40+00:00",
+                        "effective": "2017-09-05T18:10:40+00:00",
+                        "onset": "2017-09-06T06:00:00+00:00",
+                        "expires": "2017-09-06T14:00:00+00:00",
+                        "ends": "2017-09-07T06:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "High Wind Warning",
+                        "sender": "NWS Fairbanks AK",
+                        "headline": "High Wind Warning issued September 5 at 10:10AM AKDT expiring September 6 at 10:00PM AKDT by NWS Fairbanks AK",
+                        "description": "* LOCATION...Alaska Range Passes.\n\n* WINDS...South winds 30 to 45 mph with gusts to 70 mph.\n\n* TIMING...Winds will begin to increase late this evening and\nwill peak during the day on Wednesday. Winds will start to drop\nWednesday evening.\n\n* IMPACTS...Strong winds will make travel difficult. Loose\nobjects will be blown around.",
+                        "instruction": "A High Wind Warning means hazardous high winds are occurring or\nexpected. Take precautions to protect life and prevent property\ndamage.",
+                        "response": "Prepare",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HIGH WIND WARNING REMAINS IN EFFECT FROM 10 PM THIS EVENING TO 10 PM AKDT WEDNESDAY"
+                            ],
+                            "VTEC": [
+                                "/O.CON.PAFG.HW.W.0007.170906T0600Z-170907T0600Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "AFGNPWAFG"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-07T06:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512017-2343340",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512017-2343340",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512017-2343340",
+                        "areaDesc": "Central Interior",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ221"
+                            ],
+                            "SAME": [
+                                "002290",
+                                "002090",
+                                "002068"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:10:40+00:00",
+                        "effective": "2017-09-05T18:10:40+00:00",
+                        "onset": "2017-09-06T08:00:00+00:00",
+                        "expires": "2017-09-06T14:00:00+00:00",
+                        "ends": "2017-09-06T20:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "Wind Advisory",
+                        "sender": "NWS Fairbanks AK",
+                        "headline": "Wind Advisory issued September 5 at 10:10AM AKDT expiring September 6 at 12:00PM AKDT by NWS Fairbanks AK",
+                        "description": "The National Weather Service in Fairbanks has issued a Wind\nAdvisory, which is in effect from midnight tonight to noon AKDT\nWednesday.\n\n* LOCATION...From Tanana north.\n\n* WINDS...East 15 to 25 mph with gusts to 40 mph.\n\n* TIMING...Winds will increase late this evening and will peak\nearly Wednesday morning. Winds start to decrease late Wednesday\nmorning.",
+                        "instruction": "A Wind Advisory means that strong winds are occurring or\nexpected. Travel may be difficult. Secure loose objects which may\nbe blown about by the wind.",
+                        "response": "Execute",
+                        "parameters": {
+                            "NWSheadline": [
+                                "WIND ADVISORY IN EFFECT FROM MIDNIGHT TONIGHT TO NOON AKDT WEDNESDAY"
+                            ],
+                            "VTEC": [
+                                "/O.NEW.PAFG.WI.Y.0034.170906T0800Z-170906T2000Z/"
+                            ],
+                            "PIL": [
+                                "AFGNPWAFG"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-06T20:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-KEEPALIVE-40548",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-KEEPALIVE-40548",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-KEEPALIVE-40548",
+                        "areaDesc": "Montgomery",
+                        "geocode": {
+                            "UGC": [
+                                "MDC031"
+                            ],
+                            "SAME": [
+                                "024031"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:06:57+00:00",
+                        "effective": "2017-09-05T18:06:57+00:00",
+                        "onset": null,
+                        "expires": "2017-09-05T18:16:57+00:00",
+                        "ends": null,
+                        "status": "Test",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Unknown",
+                        "certainty": "Unknown",
+                        "urgency": "Unknown",
+                        "event": "Test Message",
+                        "sender": "NWS",
+                        "headline": null,
+                        "description": "Monitoring message only. Please disregard.",
+                        "instruction": "Monitoring message only. Please disregard.",
+                        "response": "None",
+                        "parameters": {
+                            "WMOIdentifier": [
+                                "XOUS55 KWBC 051806"
+                            ],
+                            "PIL": [
+                                "NWSKEPWBC"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512012",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -83.95,
+                                    36.64
+                                ],
+                                [
+                                    -83.88,
+                                    36.68
+                                ],
+                                [
+                                    -83.94,
+                                    36.72
+                                ],
+                                [
+                                    -83.87,
+                                    36.84
+                                ],
+                                [
+                                    -83.1,
+                                    36.83
+                                ],
+                                [
+                                    -83.14,
+                                    36.74
+                                ],
+                                [
+                                    -83.34,
+                                    36.7
+                                ],
+                                [
+                                    -83.43,
+                                    36.67
+                                ],
+                                [
+                                    -83.53,
+                                    36.67
+                                ],
+                                [
+                                    -83.64,
+                                    36.62
+                                ],
+                                [
+                                    -83.69,
+                                    36.58
+                                ],
+                                [
+                                    -83.95,
+                                    36.64
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512012",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512012",
+                        "areaDesc": "Bell; Harlan; Knox",
+                        "geocode": {
+                            "UGC": [
+                                "KYZ087",
+                                "KYZ088",
+                                "KYZ086"
+                            ],
+                            "SAME": [
+                                "021013",
+                                "021095",
+                                "021121"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T18:06:54+00:00",
+                        "effective": "2017-09-05T18:06:54+00:00",
+                        "onset": "2017-09-05T18:06:00+00:00",
+                        "expires": "2017-09-05T18:30:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Observed",
+                        "urgency": "Expected",
+                        "event": "Special Weather Statement",
+                        "sender": "NWS Jackson KY",
+                        "headline": "Special Weather Statement issued September 5 at 2:06PM EDT by NWS Jackson KY",
+                        "description": "At 206 PM EDT, a strong thunderstorm was located over Clear Creek\nSprings, or near Pineville, moving east at 45 mph.\n\nWinds in excess of 30 mph are possible with this storm.\n\nLocations impacted include...\nHarlan, Pineville, Middlesboro, Wallins Creek, Bobs Creek, Mary\nAlice, Artemus, Chevrolet, Varilla, Coldiron, Ponza, Black Snake,\nElcomb, Blanche, Cubage, Binghamtown, Rella, White Star, Clear Creek\nSprings and Wasioto.\n\nTorrential rainfall is also occurring with this storm, and may cause\nlocalized flooding. Do not drive your vehicle through flooded\nroadways.\n\nFrequent cloud to ground lightning is occurring with this storm.\nLightning can strike 10 miles away from a thunderstorm. Seek a safe\nshelter inside a building or vehicle.",
+                        "instruction": "",
+                        "response": "Execute",
+                        "parameters": {
+                            "eventMotionDescription": [
+                                "2017-09-05T18:06:00.000-04:00...storm...274DEG...40KT...36.72,-83.74"
+                            ],
+                            "NWSheadline": [
+                                "A STRONG THUNDERSTORM WILL AFFECT SOUTHWESTERN HARLAN...BELL AND SOUTH CENTRAL KNOX COUNTIES"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "JKLSPSJKL"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512010",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512010",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512010",
+                        "areaDesc": "Western Prince William Sound; Matanuska Valley",
+                        "geocode": {
+                            "UGC": [
+                                "AKZ125",
+                                "AKZ111"
+                            ],
+                            "SAME": [
+                                "002020",
+                                "002122",
+                                "002261",
+                                "002170"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T17:55:09+00:00",
+                        "effective": "2017-09-05T17:55:09+00:00",
+                        "onset": "2017-09-05T17:54:00+00:00",
+                        "expires": "2017-09-06T13:30:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Observed",
+                        "urgency": "Expected",
+                        "event": "Special Weather Statement",
+                        "sender": "NWS",
+                        "headline": "Special Weather Statement issued September 5 at 9:54AM AKDT by NWS",
+                        "description": "A developing storm system over the southern Gulf of Alaska will\nintensify as it skirts south of the Kenai Peninsula tonight.\nEasterly winds with gusts of 60 to 70 mph will develop across\nPortage Valley and the Eastern Turnagain Arm. Winds are expected\nto peak in these areas around midnight before diminishing\nWednesday morning. Strong and gusty winds across the Matanuska\nValley will develop by late this afternoon and should peak\novernight.\n\nModerate to locally heavy rainfall will also accompany this\nsystem with the brunt of the rain along the North Gulf Coast and\nsouthern and eastern Kenai Peninsula through tonight. This will be\na fast moving system which should limit the duration of heavier\nrainfall, so there are no flooding concerns at this time.\n\nIn Seward specifically, rain and winds will work in tandem to\ncause potential impacts. 2 to 3 inches of rainfall are expected in\nabout an 18 hour period from this afternoon through Wednesday\nmorning. South winds will develop tonight ranging from 15 to 30\nmph with gusts as high as 45 mph. Wet ground combined with the\npresence of leaves on the trees this time of year makes them more\nsusceptible to being blown over as well.",
+                        "instruction": "",
+                        "response": "Execute",
+                        "parameters": {
+                            "NWSheadline": [
+                                "Very Windy and Wet Conditions on the Way"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "AERSPSAER"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512007-2343332",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512007-2343332",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512007-2343332",
+                        "areaDesc": "Mayaguez and Vicinity",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ010"
+                            ],
+                            "SAME": [
+                                "072003",
+                                "072011",
+                                "072067",
+                                "072097",
+                                "072099",
+                                "072117",
+                                "072125"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511961-2343296"
+                        ],
+                        "sent": "2017-09-05T17:53:06+00:00",
+                        "effective": "2017-09-05T17:53:06+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Mayaguez and Vicinity\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Tropical Storm force wind\n- Peak Wind Forecast: 35-45 mph with gusts to 60 mph\n- Window for Tropical Storm force winds: Wednesday afternoon\nuntil Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Localized storm surge possible\n- Peak Storm Surge Inundation: The potential for 1-3 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for peak\nstorm surge flooding of greater than 1 foot above ground.\n- To be safe, prepare for the potential of limited storm\nsurge flooding impacts. Efforts should now be brought to\ncompletion before conditions deteriorate.\n- Localized inundation is possible. Follow the instructions\nof local officials. Consider voluntary evacuation if\nrecommended. Leave immediately if evacuation orders are\nissued.\n\n- POTENTIAL IMPACTS: Limited\n- Localized inundation with storm surge flooding mainly along\nimmediate shorelines and in low-lying spots, or in areas\nfarther inland near where higher surge waters move ashore.\n- Sections of near-shore roads and parking lots become\noverspread with surge water. Driving conditions dangerous\nin places where surge water covers the road.\n- Moderate beach erosion. Heavy surf also breaching dunes,\nmainly in usually vulnerable locations. Strong rip currents.\n- Minor to locally moderate damage to marinas, docks,\nboardwalks, and piers. A few small craft broken away from\nmoorings.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512009-2343334",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512009-2343334",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512009-2343334",
+                        "areaDesc": "Southwest",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ011"
+                            ],
+                            "SAME": [
+                                "072079",
+                                "072055",
+                                "072023"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511956-2343291"
+                        ],
+                        "sent": "2017-09-05T17:53:06+00:00",
+                        "effective": "2017-09-05T17:53:06+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Southwest\n\n* WIND\n- LATEST LOCAL FORECAST: Below tropical storm force wind\n- Peak Wind Forecast: 25-35 mph with gusts to 50 mph\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nhurricane force wind of 74 to 110 mph of equivalent\nCategory 1 to 2 intensity.\n- To be safe, aggressively prepare for the potential of\nextensive wind impacts. Remaining efforts to secure\nproperties should now be brought to completion.\n- Dangerous and life-threatening wind is possible. Failure to\nadequately shelter may result in serious injury or loss of\nlife. Move to safe shelter before the wind becomes\nhazardous.\n\n- POTENTIAL IMPACTS: Extensive\n- Considerable roof damage to sturdy buildings, with some\nhaving window, door, and garage door failures leading to\nstructural damage. Mobile homes severely damaged, with some\ndestroyed. Damage accentuated by airborne projectiles.\nLocations may be uninhabitable for weeks.\n- Many large trees snapped or uprooted along with fences and\nroadway signs blown over.\n- Some roads impassable from large debris, and more within\nurban or heavily wooded places. Several bridges, causeways,\nand access routes impassable.\n- Large areas with power and communications outages.\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Localized storm surge possible\n- Peak Storm Surge Inundation: The potential for 1-3 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for peak\nstorm surge flooding of greater than 1 foot above ground.\n- To be safe, prepare for the potential of limited storm\nsurge flooding impacts. Efforts should now be brought to\ncompletion before conditions deteriorate.\n- Localized inundation is possible. Follow the instructions\nof local officials. Consider voluntary evacuation if\nrecommended. Leave immediately if evacuation orders are\nissued.\n\n- POTENTIAL IMPACTS: Limited\n- Localized inundation with storm surge flooding mainly along\nimmediate shorelines and in low-lying spots, or in areas\nfarther inland near where higher surge waters move ashore.\n- Sections of near-shore roads and parking lots become\noverspread with surge water. Driving conditions dangerous\nin places where surge water covers the road.\n- Moderate beach erosion. Heavy surf also breaching dunes,\nmainly in usually vulnerable locations. Strong rip currents.\n- Minor to locally moderate damage to marinas, docks,\nboardwalks, and piers. A few small craft broken away from\nmoorings.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511996-2343321",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511996-2343321",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511996-2343321",
+                        "areaDesc": "Vieques",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ013"
+                            ],
+                            "SAME": [
+                                "072147"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511962-2343297"
+                        ],
+                        "sent": "2017-09-05T17:53:05+00:00",
+                        "effective": "2017-09-05T17:53:05+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Vieques\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Strong Tropical Storm force\nwind\n- Peak Wind Forecast: 45-60 mph with gusts to 80 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 3-5 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Moderate\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\ndangerous storm surge flooding of greater than 3 feet above\nground.\n- To be safe, earnestly prepare for the potential of\nsignificant storm surge flooding impacts. Evacuation\nefforts should now be brought to completion. Evacuations\nmust be complete before driving conditions become unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury or loss of\nlife. Leave if evacuation orders are given for your area.\nConsider voluntary evacuation if recommended. Poor\ndecisions may needlessly risk lives.\n\n- POTENTIAL IMPACTS: Significant\n- Areas of inundation with storm surge flooding accentuated\nby waves. Damage to several buildings, mainly near the\ncoast.\n- Sections of near-shore escape routes and secondary roads\nbecome weakened or washed out, especially in usually\nvulnerable low spots.\n- Major beach erosion with heavy surf breaching dunes. Strong\nand numerous rip currents.\n- Moderate damage to marinas, docks, boardwalks, and piers.\nSeveral small craft broken away from moorings, especially\nin unprotected anchorages.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512005-2343330",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512005-2343330",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512005-2343330",
+                        "areaDesc": "San Juan and Vicinity",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ001"
+                            ],
+                            "SAME": [
+                                "072021",
+                                "072031",
+                                "072033",
+                                "072061",
+                                "072127",
+                                "072135",
+                                "072137",
+                                "072139"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511959-2343294"
+                        ],
+                        "sent": "2017-09-05T17:53:05+00:00",
+                        "effective": "2017-09-05T17:53:05+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- San Juan and Vicinity\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Strong Tropical Storm force\nwind\n- Peak Wind Forecast: 45-60 mph with gusts to 80 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 3-5 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Moderate\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\ndangerous storm surge flooding of greater than 3 feet above\nground.\n- To be safe, earnestly prepare for the potential of\nsignificant storm surge flooding impacts. Evacuation\nefforts should now be brought to completion. Evacuations\nmust be complete before driving conditions become unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury or loss of\nlife. Leave if evacuation orders are given for your area.\nConsider voluntary evacuation if recommended. Poor\ndecisions may needlessly risk lives.\n\n- POTENTIAL IMPACTS: Significant\n- Areas of inundation with storm surge flooding accentuated\nby waves. Damage to several buildings, mainly near the\ncoast.\n- Sections of near-shore escape routes and secondary roads\nbecome weakened or washed out, especially in usually\nvulnerable low spots.\n- Major beach erosion with heavy surf breaching dunes. Strong\nand numerous rip currents.\n- Moderate damage to marinas, docks, boardwalks, and piers.\nSeveral small craft broken away from moorings, especially\nin unprotected anchorages.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511999-2343324",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511999-2343324",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511999-2343324",
+                        "areaDesc": "St.Thomas...St. John.. and Adjacent Islands",
+                        "geocode": {
+                            "UGC": [
+                                "VIZ001"
+                            ],
+                            "SAME": [
+                                "078030",
+                                "078020"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511969-2343304"
+                        ],
+                        "sent": "2017-09-05T17:53:05+00:00",
+                        "effective": "2017-09-05T17:53:05+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- St Thomas St John and adjacent islands\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Cat 4 Hurricane force wind\n- Peak Wind Forecast: 115-135 mph with gusts to 145 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n- Window for Hurricane force winds: Wednesday morning until\nWednesday evening\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has increased from the previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 7-11 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nextreme storm surge flooding greater than 9 feet above\nground.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic storm surge flooding impacts.\nEvacuation efforts should now be brought to completion.\nEvacuations must be complete before driving conditions\nbecome unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury, significant\nloss of life, or immense human suffering. Leave if\nevacuation orders are given for your area. Consider\nvoluntary evacuation if recommended. Poor decisions may\nresult in being cut off or needlessly risk lives.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread deep inundation, with storm surge flooding\ngreatly accentuated by powerful battering waves. Structural\ndamage to buildings, with many washing away. Damage greatly\ncompounded from considerable floating debris. Locations may\nbe uninhabitable for an extended period.\n- Near-shore escape routes and secondary roads washed out or\nseverely flooded. Flood control systems and barriers may\nbecome stressed.\n- Extreme beach erosion. New shoreline cuts possible.\n- Massive damage to marinas, docks, boardwalks, and piers.\nNumerous small craft broken away from moorings with many\nlifted onshore and stranded.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512004-2343329",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512004-2343329",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512004-2343329",
+                        "areaDesc": "Culebra",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ012"
+                            ],
+                            "SAME": [
+                                "072049"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511970-2343305"
+                        ],
+                        "sent": "2017-09-05T17:53:04+00:00",
+                        "effective": "2017-09-05T17:53:04+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Culebra\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Cat 1 Hurricane force wind\n- Peak Wind Forecast: 60-80 mph with gusts to 110 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n- Window for Hurricane force winds: Wednesday afternoon until\nWednesday evening\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has increased from the previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 6-9 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor storm surge flooding of greater than 6 feet above\nground.\n- To be safe, aggressively prepare for the potential of\nextensive storm surge flooding impacts. Evacuation efforts\nshould now be brought to completion. Evacuations must be\ncomplete before driving conditions become unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury, significant\nloss of life, or human suffering. Leave if evacuation\norders are given for your area. Consider voluntary\nevacuation if recommended. Poor decisions may result in\nbeing cut off or needlessly risk lives.\n\n- POTENTIAL IMPACTS: Extensive\n- Large areas of deep inundation with storm surge flooding\naccentuated by battering waves. Structural damage to\nbuildings, with several washing away. Damage compounded by\nfloating debris. Locations may be uninhabitable for an\nextended period.\n- Large sections of near-shore escape routes and secondary\nroads washed out or severely flooded. Flood control systems\nand barriers may become stressed.\n- Severe beach erosion with significant dune loss.\n- Major damage to marinas, docks, boardwalks, and piers. Many\nsmall craft broken away from moorings, especially in\nunprotected anchorages with some lifted onshore and\nstranded.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512002-2343327",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512002-2343327",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512002-2343327",
+                        "areaDesc": "Central Interior",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ006"
+                            ],
+                            "SAME": [
+                                "072009",
+                                "072019",
+                                "072039",
+                                "072043",
+                                "072047",
+                                "072073",
+                                "072101",
+                                "072105",
+                                "072107",
+                                "072149"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511968-2343303"
+                        ],
+                        "sent": "2017-09-05T17:53:04+00:00",
+                        "effective": "2017-09-05T17:53:04+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Central Interior\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Tropical Storm force wind\n- Peak Wind Forecast: 40-50 mph with gusts to 70 mph\n- Window for Tropical Storm force winds: Wednesday afternoon\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512001-2343326",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512001-2343326",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512001-2343326",
+                        "areaDesc": "North Central",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ005"
+                            ],
+                            "SAME": [
+                                "072013",
+                                "072017",
+                                "072051",
+                                "072054",
+                                "072091",
+                                "072143",
+                                "072145"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511963-2343298"
+                        ],
+                        "sent": "2017-09-05T17:53:04+00:00",
+                        "effective": "2017-09-05T17:53:04+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- North Central\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Tropical Storm force wind\n- Peak Wind Forecast: 45-55 mph with gusts to 75 mph\n- Window for Tropical Storm force winds: Wednesday afternoon\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 3-5 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Moderate\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\ndangerous storm surge flooding of greater than 3 feet above\nground.\n- To be safe, earnestly prepare for the potential of\nsignificant storm surge flooding impacts. Evacuation\nefforts should now be brought to completion. Evacuations\nmust be complete before driving conditions become unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury or loss of\nlife. Leave if evacuation orders are given for your area.\nConsider voluntary evacuation if recommended. Poor\ndecisions may needlessly risk lives.\n\n- POTENTIAL IMPACTS: Significant\n- Areas of inundation with storm surge flooding accentuated\nby waves. Damage to several buildings, mainly near the\ncoast.\n- Sections of near-shore escape routes and secondary roads\nbecome weakened or washed out, especially in usually\nvulnerable low spots.\n- Major beach erosion with heavy surf breaching dunes. Strong\nand numerous rip currents.\n- Moderate damage to marinas, docks, boardwalks, and piers.\nSeveral small craft broken away from moorings, especially\nin unprotected anchorages.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512008-2343333",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2512008-2343333",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2512008-2343333",
+                        "areaDesc": "St Croix",
+                        "geocode": {
+                            "UGC": [
+                                "VIZ002"
+                            ],
+                            "SAME": [
+                                "078010"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511966-2343301"
+                        ],
+                        "sent": "2017-09-05T17:53:03+00:00",
+                        "effective": "2017-09-05T17:53:03+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- St Croix\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Tropical Storm force wind\n- Peak Wind Forecast: 45-55 mph with gusts to 75 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Life-threatening storm surge possible\n- Peak Storm Surge Inundation: The potential for 2-4 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Moderate\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\ndangerous storm surge flooding of greater than 3 feet above\nground.\n- To be safe, earnestly prepare for the potential of\nsignificant storm surge flooding impacts. Evacuation\nefforts should now be brought to completion. Evacuations\nmust be complete before driving conditions become unsafe.\n- Life-threatening inundation is possible. Failure to heed\nevacuation orders may result in serious injury or loss of\nlife. Leave if evacuation orders are given for your area.\nConsider voluntary evacuation if recommended. Poor\ndecisions may needlessly risk lives.\n\n- POTENTIAL IMPACTS: Significant\n- Areas of inundation with storm surge flooding accentuated\nby waves. Damage to several buildings, mainly near the\ncoast.\n- Sections of near-shore escape routes and secondary roads\nbecome weakened or washed out, especially in usually\nvulnerable low spots.\n- Major beach erosion with heavy surf breaching dunes. Strong\nand numerous rip currents.\n- Moderate damage to marinas, docks, boardwalks, and piers.\nSeveral small craft broken away from moorings, especially\nin unprotected anchorages.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Moderate\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmoderate flooding where peak rainfall totals notably exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are possible.\n- To be safe, earnestly prepare for the potential of\nsignificant flooding rain impacts.\n- Dangerous flooding is possible. Failure to take action may\nresult in serious injury or loss of life. If flood related\nwatches and warnings are issued, heed recommended actions.\n\n- POTENTIAL IMPACTS: Significant\n- Moderate rainfall flooding may prompt several evacuations\nand rescues.\n- Rivers and tributaries may quickly become swollen with\nswifter currents and overspill their banks in a few places,\nespecially in usually vulnerable spots. Small streams,\ncreeks, canals, arroyos, and ditches overflow.\n- Flood waters can enter some structures or weaken\nfoundations. Several places may experience expanded areas\nof rapid inundation at underpasses, low-lying spots, and\npoor drainage areas. Some streets and parking lots take on\nmoving water as storm drains and retention ponds overflow.\nDriving conditions become hazardous. Some road and bridge\nclosures.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511997-2343322",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511997-2343322",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511997-2343322",
+                        "areaDesc": "Southeast",
+                        "geocode": {
+                            "UGC": [
+                                "PRZ003"
+                            ],
+                            "SAME": [
+                                "072015",
+                                "072057",
+                                "072095",
+                                "072109",
+                                "072123",
+                                "072151"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511967-2343302"
+                        ],
+                        "sent": "2017-09-05T17:53:03+00:00",
+                        "effective": "2017-09-05T17:53:03+00:00",
+                        "onset": "2017-09-05T17:52:00+00:00",
+                        "expires": "2017-09-06T02:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Extreme",
+                        "certainty": "Likely",
+                        "urgency": "Immediate",
+                        "event": "Hurricane Warning",
+                        "sender": "NWS San Juan PR",
+                        "headline": "Hurricane Warning issued September 5 at 1:52PM AST by NWS San Juan PR",
+                        "description": "* LOCATIONS AFFECTED\n- Southeast\n\n* WIND\n- LATEST LOCAL FORECAST: Equivalent Tropical Storm force wind\n- Peak Wind Forecast: 35-45 mph with gusts to 65 mph\n- Window for Tropical Storm force winds: Wednesday morning\nuntil early Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Extreme\n- The wind threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for\nmajor hurricane force wind greater than 110 mph of\nequivalent Category 3 intensity or higher.\n- To be safe, aggressively prepare for the potential of\ndevastating to catastrophic wind impacts. Remaining efforts\nto secure properties should now be brought to completion.\n- Extremely dangerous and life-threatening wind is possible.\nFailure to adequately shelter may result in serious injury,\nloss of life, or immense human suffering. Move to safe\nshelter before the wind becomes hazardous.\n\n- POTENTIAL IMPACTS: Devastating to Catastrophic\n- Widespread power outages with some areas experiencing\nlong-term outages\n- Many bridges and access routes connecting barrier islands\nimpassable\n- Structural category to sturdy buildings with some having\ncomplete wall and roof failures\n- Complete destruction of mobile homes\n- Numerous roads impassable from large debris\n\n* STORM SURGE\n- LATEST LOCAL FORECAST: Localized storm surge possible\n- Peak Storm Surge Inundation: The potential for 1-3 feet\nabove ground somewhere within surge prone areas\n- Window of concern: Wednesday morning until Thursday morning\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The storm surge threat has remained nearly steady from the\nprevious assessment.\n- Emergency plans should include a reasonable threat for peak\nstorm surge flooding of greater than 1 foot above ground.\n- To be safe, prepare for the potential of limited storm\nsurge flooding impacts. Efforts should now be brought to\ncompletion before conditions deteriorate.\n- Localized inundation is possible. Follow the instructions\nof local officials. Consider voluntary evacuation if\nrecommended. Leave immediately if evacuation orders are\nissued.\n\n- POTENTIAL IMPACTS: Limited\n- Localized inundation with storm surge flooding mainly along\nimmediate shorelines and in low-lying spots, or in areas\nfarther inland near where higher surge waters move ashore.\n- Sections of near-shore roads and parking lots become\noverspread with surge water. Driving conditions dangerous\nin places where surge water covers the road.\n- Moderate beach erosion. Heavy surf also breaching dunes,\nmainly in usually vulnerable locations. Strong rip currents.\n- Minor to locally moderate damage to marinas, docks,\nboardwalks, and piers. A few small craft broken away from\nmoorings.\n\n* FLOODING RAIN\n- LATEST LOCAL FORECAST:\n- Peak Rainfall Amounts: Additional 4-8 inches, with locally\nhigher amounts\n\n- CURRENT THREAT TO LIFE AND PROPERTY: High\n- The flooding rain threat has remained nearly steady from\nthe previous assessment.\n- Emergency plans should include a reasonable threat for\nmajor flooding where peak rainfall totals well exceed\namounts conducive for flash flooding and rapid inundation.\nRescues and emergency evacuations are likely.\n- To be safe, aggressively prepare for the potential of\nextensive flooding rain impacts.\n- Life-threatening flooding is possible. Failure to take\naction may result in serious injury or significant loss of\nlife. If flood related watches and warnings are issued,\nheed recommended actions. Poor decisions may result in\nbeing cut off or needlessly risk lives. If vulnerable,\nrelocate to safe shelter on higher ground before flood\nwaters arrive.\n\n- POTENTIAL IMPACTS: Extensive\n- Major rainfall flooding may prompt many evacuations and\nrescues.\n- Rivers and tributaries may rapidly overflow their banks in\nmultiple places. Small streams, creeks, canals, arroyos,\nand ditches may become dangerous rivers. In mountain areas,\ndestructive runoff may run quickly down valleys while\nincreasing susceptibility to rockslides and mudslides.\nFlood control systems and barriers may become stressed.\n- Flood waters can enter many structures within multiple\ncommunities, some structures becoming uninhabitable or\nwashed away. Many places where flood waters may cover\nescape routes. Streets and parking lots become rivers of\nmoving water with underpasses submerged. Driving conditions\nbecome dangerous. Many road and bridge closures with some\nweakened or washed out.\n\n* TORNADO\n- LATEST LOCAL FORECAST:\n- Situation is somewhat favorable for tornadoes\n\n- CURRENT THREAT TO LIFE AND PROPERTY: Elevated\n- The tornado threat has remained nearly steady from the\nprevious assessment.\n- When implementing emergency plans, include a reasonable\nthreat for isolated tornadoes.\n- To be safe, prepare for the potential of limited tornado\nimpacts.\n- Listen for tornado watches and warnings. Be ready to\nshelter quickly if a tornado approaches.\n\n- POTENTIAL IMPACTS: Limited\n- The occurrence of isolated tornadoes can hinder the\nexecution of emergency plans during tropical events.\n- A few places may experience tornado damage, along with\npower and communications disruptions.\n- Locations could realize roofs peeled off buildings,\nchimneys toppled, mobile homes pushed off foundations or\noverturned, large tree tops and branches snapped off,\nshallow-rooted trees knocked over, moving vehicles blown\noff roads, and small boats pulled from moorings.\n\n* FOR MORE INFORMATION:\n- HTTP://WWW.SRH.NOAA.GOV/SJU/",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "NWSheadline": [
+                                "HURRICANE WARNING REMAINS IN EFFECT"
+                            ],
+                            "VTEC": [
+                                "/O.CON.TJSJ.HU.W.1011.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "SJUTCVSJU"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "CMAMtext": [
+                                "Hurricane Warning this area. Check local media and authorities. -NWS"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "title": "Current watches, warnings, and advisories"
+        }
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 18:14:46 GMT
+recorded_with: VCR 3.0.3

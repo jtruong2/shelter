@@ -11,7 +11,7 @@ Please click one of the options below to log in.</h1>
     <a href="<%= google_login_path %>">
       <h2>Google</h2>
       <div class="content">
-        <p>Use your Google account to sign in.</p>
+        <p>Use Google Authentication to sign in.</p>
       </div>
     </a>
   </article>
@@ -19,10 +19,10 @@ Please click one of the options below to log in.</h1>
     <span class="image">
       <%= image_tag "fb.png" %>
     </span>
-    <a href="<%= google_login_path %>">
+    <a href="fb.html">
       <h2>Facebook</h2>
       <div class="content">
-        <p>Use your Facebook account to sign in.</p>
+        <p>Use Facebook Authentication to sign in.</p>
       </div>
     </a>
   </article>
@@ -38,3 +38,28 @@ Please click one of the options below to log in.</h1>
     </a>
   </article>
 </section>
+
+<%= link_to "View Weather Alerts", alerts_path %>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <%= form_tag :alerts, method: :get, class: "form-inline" do %>
+      <div class="form-group search-field">
+        <%= text_field_tag :state, "Search by State...", class: "form-control" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+<%= button_to "About", about_path, method: :get, class: "about-btn" %>
+<%= button_to "How It Works", info_path, method: :get, class: "info-btn" %>
+<% if current_user %>
+  <p>Welcome, <%= current_user.email %></p>
+  <%= link_to "Logout", logout_path, method: :delete , class: "logout-button"%>
+<% else %>
+  <%= link_to "Login", login_path %>
+<% end %>
