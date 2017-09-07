@@ -1,20 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe "User email" do
-  describe "ContactForm" do
-    it "delivers a valid message" do
-      user = create(:user)
+  it "delivers a valid message" do
+    ActionMailer::Base.deliveries.clear
 
-      visit contact_form_new_path
-      fill_in 'name', :with => user.first_name +' '+ user.last_name
-      fill_in 'email', :with => user.email
-      fill_in "subject", :with => "Test"
-      fill_in "message", :with => "I have a problem. Please help."
-      click_on 'Send message'
+    visit new_contact_form_path
+    fill_in("contact_form[name]", with: "Samuel")
+    fill_in("contact_form[email]", with: "Sam@aol.com")
+    fill_in("contact_form[message]", with: "I have snakes on a plane. Please help.")
+    click_on 'Send message'
 
-      page.body.should have_content("We'll get back to you shortly")
-      last_email.to.should include(user.email)
-      last_email.to.should include("admin@shelter.org")
-    end
+    expect(page).to have_content("Thank you for your response, We'll get back to you shortly")
+    expect(ActionMailer::Base.deliveries.count).to eq(1)
   end
 end

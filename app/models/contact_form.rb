@@ -9,4 +9,8 @@ class ContactForm < MailForm::Base
       from: %("#{name}" <#{email}>)
     }
   end
+
+  def self.send_message(content)
+    new(name: content[:name], email: content[:email], message: content[:message]).deliver
+  end
 end
