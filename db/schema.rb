@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170906023357) do
+ActiveRecord::Schema.define(version: 20170907132457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,18 @@ ActiveRecord::Schema.define(version: 20170906023357) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status", default: 0
     t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "property_id"
+    t.bigint "user_id"
+    t.integer "room_request"
+    t.integer "status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["property_id"], name: "index_reservations_on_property_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -54,6 +64,8 @@ ActiveRecord::Schema.define(version: 20170906023357) do
     t.string "password_digest"
   end
 
+  add_foreign_key "reservations", "properties"
+  add_foreign_key "reservations", "users"
   add_foreign_key "user_roles", "roles"
   add_foreign_key "user_roles", "users"
 end

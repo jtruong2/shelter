@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :properties
 
+  has_many :reservations
+
 
   has_secure_password
   validates_confirmation_of :password

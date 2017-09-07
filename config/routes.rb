@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       post "status_accepted", :action => :status_accepted
       post "status_cancelled", :action => :status_cancelled
       post "status_complete", :action => :status_complete
+      resources :reservations, only: [:index]
     end
     get '/:id', to: 'properties#show'
   end

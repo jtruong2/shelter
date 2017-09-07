@@ -25,20 +25,20 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
   end
 
   def status_accepted
-    property = Property.find(params[:property_id])
-    property.approved!
+    reservation = Reservation.find(params[:property_id])    
+    reservation.approved!
     redirect_to host_shelters_properties_path
   end
 
   def status_cancelled
-    property = Property.find(params[:property_id])
-    property.cancelled!
+    reservation = Reservation.find(params[:property_id])    
+    reservation.cancelled!
     redirect_to host_shelters_properties_path
   end
 
   def status_complete
-    property = Property.find(params[:property_id])
-    property.complete!
+    reservation = Reservation.find(params[:property_id])    
+    reservation.completed!
     redirect_to host_shelters_properties_path
   end
 
