@@ -4,7 +4,9 @@
     <title>Shelter - Community when you need it most</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
     <%= stylesheet_link_tag 'main.css', media: 'all' %>
+    <%= stylesheet_link_tag 'index.css', media: 'all' %>
     <%= javascript_include_tag 'jquery.min.js' %>
     <%= javascript_include_tag 'main.js' %>
     <%= javascript_include_tag 'skel.min.js' %>
@@ -12,40 +14,51 @@
   </head>
 
   <body>
+    <div>
+      <% flash.each do |key, value| %>
+      <p> <%= value %> </p>
+      <% end %>
+    </div>
+
 		<div id="wrapper">
       <header id="header">
         <div class="inner">
-          <a href="index.html" class="logo">
-            <span class="symbol"> <%= image_tag "home_icon.png" %> </span><span class="title">Shelter</span>
+
+          <%= render "layouts/navmenu" %>
+
+          <%= button_to "About", about_path, method: :get, class: "about-btn" %>
+          <%= button_to "How It Works", info_path, method: :get, class: "info-btn" %>
+
+          <a href='/' class="logo">
+            <span class="symbol"> <%= image_tag "home_icon.png" %> </span>
+            <span class="title">Shelter</span>
           </a>
-          <nav>
-            <ul>
-              <li><a href="#menu">Menu</a></li>
-            </ul>
-          </nav>
         </div>
       </header>
-      <nav id="menu">
-        <h2>Menu</h2>
-        <ul>
-          <!-- link to various pages/nav links via the below lines -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="generic.html">About</a></li>
-          <li><a href="generic.html">How It Works</a></li>
-          <li><a href="generic.html">Lorem Ipsum</a></li>
-          <li><a href="elements.html">Good Stuff Goes Here</a></li>
-        </ul>
-      </nav>
 
-					<div id="main">
+
+
+
+        	<div id="main">
 						<div class="inner">
 
               <%= yield %>
 
 						</div>
-					</div>
-          <%= render "layouts/footer" %>
-			</div>
 
-  </body>
+        	</div>
+        <%= render "layouts/footer" %>
+
+      </div>
+
+      <script src="dist/slideout.min.js"></script>
+      <script>
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('menu'),
+          'padding': 256,
+          'tolerance': 70
+        });
+      </script>
+    </body>
 </html>
