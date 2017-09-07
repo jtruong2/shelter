@@ -1,65 +1,67 @@
 require 'rails_helper'
 
 RSpec.describe "Host Shelter Owner Can" do
-
   before :each do
     Role.create(name: "user")
     Role.create(name: "owner")
     @user = create(:user)
   end
 
-  it "Sees a list of their properties at the Properties Index Page" do
+  scenario "sends default request" do
+    VCR.use_cassette("properties/view_index") do
 
-    @user.properties.create(:street_address => "123 Circle Dr",
-                            :city => "Denver",
-                            :state => "Colorado",
-                            :rooms_available => 2)
-
-    @user.owner!
-
-   allow_any_instance_of(ApplicationController).to receive(:current_user).
-   and_return(@user)
-
-   visit '/host_shelters/properties'
-
-   expect(@user.owner?).to eq true
-   expect(current_path).to eq host_shelters_properties_path
-   expect(page).to have_content @user.properties.first.street_address
-   expect(page).to have_content @user.properties.first.city
-   expect(page).to have_content @user.properties.first.state
-   expect(page).to have_content @user.properties.first.rooms_available
-  end
-
-  it "Sees a list of their properties at the Properties Index Page" do
-
-    @user.properties.create(:street_address => "1701 Bryant St",
+      @user.properties.create(:street_address => "1701 Bryant St",
                                   :city => "Denver",
                                   :state => "Colorado",
                                   :rooms_available => 2)
+      @user.owner!
 
-         @user.properties.create(:street_address => "1331 17th St",
-                                  :city => "Denver",
-                                  :state => "Colorado",
-                                  :rooms_available => 12)
+     allow_any_instance_of(ApplicationController).to receive(:current_user).
+     and_return(@user)
 
-    @user.owner!
+     visit '/host_shelters/properties'
 
-   allow_any_instance_of(ApplicationController).to receive(:current_user).
-   and_return(@user)
+     expect(@user.owner?).to eq true
+     expect(current_path).to eq host_shelters_properties_path
+     expect(page).to have_content @user.properties.first.street_address
+     expect(page).to have_content @user.properties.first.city
+     expect(page).to have_content @user.properties.first.state
+     expect(page).to have_content @user.properties.first.rooms_available
+    end
+  end
 
-   visit '/host_shelters/properties'
+  scenario "sends different default request" do
+    VCR.use_cassette("properties/view_index_dos") do
 
-   expect(@user.owner?).to eq true
-   expect(current_path).to eq host_shelters_properties_path
+      @user.properties.create(:street_address => "1701 Bryant St",
+                                    :city => "Denver",
+                                    :state => "Colorado",
+                                    :rooms_available => 2)
 
-   expect(page).to have_content @user.properties.first.street_address
-   expect(page).to have_content @user.properties.first.city
-   expect(page).to have_content @user.properties.first.state
-   expect(page).to have_content @user.properties.first.rooms_available
+      @user.properties.create(:street_address => "1331 17th St",
+                                    :city => "Denver",
+                                    :state => "Colorado",
+                                    :rooms_available => 12)
 
-   expect(page).to have_content @user.properties.second.street_address
-   expect(page).to have_content @user.properties.second.city
-   expect(page).to have_content @user.properties.second.state
-   expect(page).to have_content @user.properties.second.rooms_available
+      @user.owner!
+
+     allow_any_instance_of(ApplicationController).to receive(:current_user).
+     and_return(@user)
+
+     visit '/host_shelters/properties'
+
+     expect(@user.owner?).to eq true
+     expect(current_path).to eq host_shelters_properties_path
+
+     expect(page).to have_content @user.properties.first.street_address
+     expect(page).to have_content @user.properties.first.city
+     expect(page).to have_content @user.properties.first.state
+     expect(page).to have_content @user.properties.first.rooms_available
+
+     expect(page).to have_content @user.properties.second.street_address
+     expect(page).to have_content @user.properties.second.city
+     expect(page).to have_content @user.properties.second.state
+     expect(page).to have_content @user.properties.second.rooms_available
+    end
   end
 end
