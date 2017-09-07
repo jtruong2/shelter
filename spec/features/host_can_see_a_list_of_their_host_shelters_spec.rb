@@ -32,15 +32,15 @@ RSpec.describe "Host Shelter Owner Can" do
 
   it "Sees a list of their properties at the Properties Index Page" do
 
-    @user.properties.create(:street_address => "123 Circle Dr",
-                            :city => "Denver",
-                            :state => "Colorado",
-                            :rooms_available => 2)
+    @user.properties.create(:street_address => "1701 Bryant St",
+                                  :city => "Denver",
+                                  :state => "Colorado",
+                                  :rooms_available => 2)
 
-    @user.properties.create(:street_address => "Hardy HAR HAR Dr.",
-                            :city => "Denver",
-                            :state => "Colorado",
-                            :rooms_available => 12)
+         @user.properties.create(:street_address => "1331 17th St",
+                                  :city => "Denver",
+                                  :state => "Colorado",
+                                  :rooms_available => 12)
 
     @user.owner!
 
@@ -51,7 +51,7 @@ RSpec.describe "Host Shelter Owner Can" do
 
    expect(@user.owner?).to eq true
    expect(current_path).to eq host_shelters_properties_path
-   
+
    expect(page).to have_content @user.properties.first.street_address
    expect(page).to have_content @user.properties.first.city
    expect(page).to have_content @user.properties.first.state
