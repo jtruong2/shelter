@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'faraday'
-gem 'figaro'
 gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
@@ -44,6 +43,8 @@ end
 
 group :test do
   gem 'rake'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

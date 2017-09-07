@@ -39,6 +39,20 @@ Please click one of the options below to log in.</h1>
   </article>
 </section>
 
+<%= link_to "View Weather Alerts", alerts_path %>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <%= form_tag :alerts, method: :get, class: "form-inline" do %>
+      <div class="form-group search-field">
+        <%= text_field_tag :state, "Search by State...", class: "form-control" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 <%= button_to "About", about_path, method: :get, class: "about-btn" %>
