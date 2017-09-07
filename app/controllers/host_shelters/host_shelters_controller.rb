@@ -7,4 +7,11 @@ class HostShelters::HostSheltersController < ApplicationController
        redirect_to login_path
      end
   end
+
+  def property_owner(property_id)
+    unless current_user == Property.find(property_id).user
+      session[:user_id] = nil
+      redirect_to login_path
+    end
+  end
 end

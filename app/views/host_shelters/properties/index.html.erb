@@ -1,0 +1,8 @@
+<ul>
+  <% @properties.each do |property| %>
+    <li><%= property.street_address %></li>
+    <li><%= property.city %></li>
+    <li><%= property.state %></li>
+    <li><%= property.rooms_available %></li>
+  <% end %>
+</ul>
