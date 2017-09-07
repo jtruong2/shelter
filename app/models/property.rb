@@ -5,6 +5,8 @@ class Property < ApplicationRecord
 
   belongs_to :user
 
+  has_many :reservations
+
   def address
     self.address = "#{street_address}, #{city}, #{state}"
   end
