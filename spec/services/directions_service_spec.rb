@@ -3,12 +3,11 @@ require "rails_helper"
 describe DirectionService do
   context "class methods" do
     context ".find_directions" do
-      it "finds all national weather alerts" do
+      it "finds directions to destination" do
         VCR.use_cassette("services/find_directions") do
           location       = "2001+Blake+St+Denver+CO"
           destination    = "1331+17th+St+Denver+CO"
           raw_directions = DirectionService.find_directions(location, destination)
-
           expect(raw_directions).to have_key(:steps)
           expect(raw_directions[:steps]).to be_a Array
 
