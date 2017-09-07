@@ -1,3 +1,4 @@
+var tempMarkers = [];
 var properties = $('#js-properties').data('properties');
 
 function initMap() {
@@ -32,5 +33,8 @@ function setMarkers(map) {
       icon: image,
       shape: shape,
     });
+    tempMarkers.push(marker);
   }
+  var markerCluster = new MarkerClusterer(map, tempMarkers,
+    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
