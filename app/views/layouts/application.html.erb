@@ -11,48 +11,33 @@
     <%= javascript_include_tag 'main.js' %>
     <%= javascript_include_tag 'skel.min.js' %>
     <%= javascript_include_tag 'util.js' %>
+    <%= javascript_include_tag 'menu.js' %>
   </head>
-
   <body>
-    <div>
-      <% flash.each do |key, value| %>
-      <p> <%= value %> </p>
-      <% end %>
-    </div>
 
-		<div id="wrapper">
+    <%= render "layouts/flash" %>
+
+    <div id="wrapper">
       <header id="header">
         <div class="inner">
 
-          <%= render "layouts/navmenu" %>
-          <%= render "layouts/navbar" %>
+          <%= render "layouts/navbar1" %>
+          <!-- <%= render "layouts/navmenu" %> -->
+          <!-- this ^^ is for the JS menu slideout-menu -->
 
         </div>
       </header>
 
+    	<div id="main">
+				<div class="inner">
 
+          <%= yield %>
 
+				</div>
+    	</div>
 
-        	<div id="main">
-						<div class="inner">
-
-              <%= yield %>
-
-						</div>
-
-        	</div>
-        <%= render "layouts/footer" %>
+      <%= render "layouts/footer" %>
 
       </div>
-
-      <script src="dist/slideout.min.js"></script>
-      <script>
-        var slideout = new Slideout({
-          'panel': document.getElementById('panel'),
-          'menu': document.getElementById('menu'),
-          'padding': 256,
-          'tolerance': 70
-        });
-      </script>
     </body>
 </html>
