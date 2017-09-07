@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "User Can Sign In Through Google" do
-  scenario "sends default request" do
-    VCR.use_cassette("properties/become_host") do
+  it "Sees that home Page with User name" do
+    VCR.use_cassette("features/user_becomes_host") do
       Role.create(name: "user")
       Role.create(name: "owner")
       user = create(:user)

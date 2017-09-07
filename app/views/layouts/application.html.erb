@@ -3,17 +3,29 @@
     <title>Shelter - Community when you need it most</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
     <%= stylesheet_link_tag 'main.css', media: 'all' %>
+    <%= stylesheet_link_tag 'index.css', media: 'all' %>
     <%= javascript_include_tag 'jquery.min.js' %>
     <%= javascript_include_tag 'main.js' %>
     <%= javascript_include_tag 'skel.min.js' %>
     <%= javascript_include_tag 'util.js' %>
+    <%= javascript_include_tag 'menu.js' %>
   </head>
-
   <body>
-		<div id="wrapper">
+
+    <%= render "layouts/flash" %>
+
+    <div id="wrapper">
       <header id="header">
         <div class="inner">
+
+          <%= render "layouts/navbar1" %>
+          <!-- <%= render "layouts/navmenu" %> -->
+          <!-- this ^^ is for the JS menu slideout-menu -->
+
+        </div>
+      </header>
           <a href="/" class="logo">
             <span class="symbol"> <%= image_tag "home_icon.png" %> </span><span class="title">Shelter</span>
           </a>
@@ -35,7 +47,7 @@
           <li><a href="elements.html">Good Stuff Goes Here</a></li>
         </ul>
       </nav>
-
+        <%= render "layouts/search" %>
 					<div id="main">
 						<div class="inner">
 

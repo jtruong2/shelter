@@ -3,9 +3,9 @@ class User < ApplicationRecord
 
   has_many :user_roles
   has_many :roles, through: :user_roles
-
   has_many :properties
 
+  has_many :reservations
 
   has_secure_password
   validates_confirmation_of :password
@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :email, :presence => true, :uniqueness => true
   # validates :first_name, presence: true
   # validates :last_name, presence: true
-  validates :email, presence: true, uniqueness: true
+  #validates :email, presence: true, uniqueness: true
 
 
   def self.from_omniauth(auth)
@@ -43,6 +43,6 @@ class User < ApplicationRecord
   private
 
   def user_role_create
-    self.roles << Role.find_by(name: "user")
+    self.roles << (Role.find_by(name: "user"))
   end
 end

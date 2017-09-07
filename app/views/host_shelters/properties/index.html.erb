@@ -1,8 +1,37 @@
-<ul>
-  <% @properties.each do |property| %>
-    <li><%= property.street_address %></li>
-    <li><%= property.city %></li>
-    <li><%= property.state %></li>
-    <li><%= property.rooms_available %></li>
-  <% end %>
-</ul>
+<section class="tiles">
+  <article class="styles2">
+    <h3>Properties List</h3>
+    <% @properties.each do |property| %>
+      <p><%= property.street_address %>, <%= property.city %>, <%= property.state %></p>
+    <% end %>
+  </article>
+</section>
+
+<section class="tiles">
+  <article class"styles1">
+    <h3>Reservations</h3>
+    <% @properties.each do |property| %>
+      <h3><%= property.street_address %></h3>
+        <h4>Pending</h4>
+        <% property.reservations.pending.each do |reservation| %>
+        <p class="pending">User: <%= reservation.user_id %> Room Request: <%= reservation.room_request %></p>
+          <%= button_to "Approve", host_shelters_property_status_accepted_path(reservation.id) %>
+          <%= button_to "Cancel", host_shelters_property_status_cancelled_path(reservation.id) %>
+        <% end %>
+        <h4>Approved</h4>
+        <% property.reservations.approved.each do |reservation| %>
+          <p class="approved">
+            User: <%= reservation.user_id %> Room Request: <%= reservation.room_request %><br>
+          <%= button_to "Complete", host_shelters_property_status_complete_path(reservation.id) %>
+          </p>
+        <% end %>
+        <h4>Completed</h4>
+        <% property.reservations.completed.each do |reservation| %>
+          <p class="completed">
+            User: <%= reservation.user_id %> Room Request: <%= reservation.room_request %><br>
+          </p>
+      <% end %>
+      <p><%= link_to "Cancelled Requests", host_shelters_property_reservations_path(property) %></p>
+    <% end %>
+  </article>
+</section>

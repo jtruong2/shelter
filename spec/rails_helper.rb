@@ -6,8 +6,10 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'capybara/rails'
+
 require 'webmock/rspec'
 require 'vcr'
+require 'mail'
 
   def stub_omniauth
     OmniAuth.config.test_mode = true

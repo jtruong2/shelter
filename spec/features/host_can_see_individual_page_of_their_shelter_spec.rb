@@ -8,18 +8,15 @@ RSpec.describe "Host Shelter Owner Can" do
     @user = create(:user)
   end
 
-  scenario "sends default request" do
-    VCR.use_cassette("properties/view_individual") do
+  it "Sees a list of their properties at the Properties Index Page" do
+    VCR.use_cassette("features/see_props_index") do
 
-      @user.properties.create(:street_address => "1701 Bryant St",
-                                :city => "Denver",
-                                :state => "Colorado",
-                                :rooms_available => 2)
+      property = @user.properties.create(:street_address => "1331 17th St",
+                                         :city => "Denver",
+                                         :state => "Colorado",
+                                         :rooms_available => 2)
 
       @user.owner!
-      property = Property.last
-
-
 
      allow_any_instance_of(ApplicationController).to receive(:current_user).
      and_return(@user)

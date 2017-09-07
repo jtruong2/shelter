@@ -5,6 +5,8 @@ class Property < ApplicationRecord
 
   belongs_to :user
 
+  has_many :reservations
+
   def address
     self.address = "#{street_address}, #{city}, #{state}"
   end
@@ -23,5 +25,10 @@ class Property < ApplicationRecord
 
   def self.all_coordinates
     all.map {|property| property = [property.latitude, property.longitude]}
+  end
+
+  def self.search(location)
+    location = location[:search]
+    where("street_address ILIKE ? OR city ILIKE ? OR state ILIKE ?", "%#{location}%", "%#{location}%", "%#{location}%")
   end
 end
