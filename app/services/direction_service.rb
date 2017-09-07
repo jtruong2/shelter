@@ -20,6 +20,6 @@ class DirectionService
 
   def get_url(url)
     response = Faraday.get(url)
-    a = JSON.parse(response.body, symbolize_names: true)[:routes].first[:legs].first
+    JSON.parse(response.body, symbolize_names: true)[:routes].first[:legs].first
   end
 end
