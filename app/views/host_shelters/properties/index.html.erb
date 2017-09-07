@@ -1,39 +1,36 @@
 <div class"">
-  <% @properties.each do |property| %>
-    <% if property.approved? %>
-      <h3>Approved</h3>
-        <div class="approved">
-          <p>
+  <h3>Pending</h3>
+    <% @properties.pending.each do |property| %>
+      <div class="pending">
+        <p class="pending">
+        <%= property.street_address %><br>
+        <%= property.city %>, <%= property.state %><br>
+          Rooms Available: <%= property.rooms_available %>
+        <%= button_to "Approve", host_shelters_property_status_accepted_path(property) %> 
+        </p>
+      </div>
+    <% end %>
+
+  <h3>Approved</h3>
+    <% @properties.approved.each do |property| %>
+      <div class="approved">
+        <p class="approved">
           <%= property.street_address %><br>
           <%= property.city %>, <%= property.state %><br>
-          </p>
-          <p>
-            Rooms Available: <%= property.rooms_available %>
-          </p>
-        </div>
-    <% elsif property.pending? %>
-      <h3>Pending</h3>
-        <div class="pending">
-          <p>
-            <%= property.street_address %><br>
-            <%= property.city %>, <%= property.state %><br>
-          </p>
-          <p>
-            Rooms Available: <%= property.rooms_available %><br>
-          </p>
-        </div>
-    <% elsif property.complete? %>
-      <h3>Complete</h3>
-        <div class="complete">
-          <p>
-            <%= property.street_address %><br>
-            <%= property.city %>, <%= property.state %><br>
-          </p>
-          <p>
-            Rooms Available: <%= property.rooms_available %><br>
-          </p>
-        </div>
+          Rooms Available: <%= property.rooms_available %><br>
+        </p>
+      </div>
     <% end %>
-  <% end %>
+
+  <h3>Complete</h3>
+    <% @properties.complete.each do |property| %>
+      <div class="complete">
+        <p class="complete">
+          <%= property.street_address %><br>
+          <%= property.city %>, <%= property.state %><br>
+          Rooms Available: <%= property.rooms_available %><br>
+        </p>
+      </div>
+    <% end %>
 </div>
 

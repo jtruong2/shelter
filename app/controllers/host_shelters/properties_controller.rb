@@ -24,6 +24,12 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
     @property = Property.find(property_id_params)
   end
 
+  def status_accepted
+    property = Property.find(params[:property_id])
+    property.approved!
+    redirect_to host_shelters_properties_path
+  end
+
  private
 
   def safe_params

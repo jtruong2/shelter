@@ -16,7 +16,9 @@ Rails.application.routes.draw do
 
   namespace :host_shelters do
     get '/sign_up', to: 'properties#new'
-    resources :properties, only: [:create, :new, :index]
+    resources :properties, only: [:create, :new, :index] do
+      post "status_accepted", :action => :status_accepted
+    end
     get '/:id', to: 'properties#show'
   end
 
