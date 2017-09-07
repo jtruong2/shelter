@@ -1,0 +1,1810 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weather.gov/alerts/active/area/TX?limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Type:
+      - application/geo+json
+      X-Powered-By:
+      - PHP/5.6.25
+      Cache-Control:
+      - max-age=120, public, s-maxage=120
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Server-Id:
+      - vm-bldr-nids-apiapp52.ncep.noaa.gov
+      X-Correlation-Id:
+      - 6c695a8b-d728-44af-812a-fda9fc8b5398
+      X-Request-Id:
+      - 6c695a8b-d728-44af-812a-fda9fc8b5398
+      Date:
+      - Tue, 05 Sep 2017 18:14:46 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - Transfer-Encoding
+      - keep-alive
+      Vary:
+      - Accept
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "@context": [
+                "https://raw.githubusercontent.com/geojson/geojson-ld/master/contexts/geojson-base.jsonld",
+                {
+                    "wx": "https://api.weather.gov/ontology#",
+                    "@vocab": "https://api.weather.gov/ontology#"
+                }
+            ],
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511983",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511983",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511983",
+                        "areaDesc": "Nueces; Calhoun; Aransas; San Patricio; Kleberg; Refugio",
+                        "geocode": {
+                            "UGC": [
+                                "TXZ243",
+                                "TXZ247",
+                                "TXZ245",
+                                "TXZ244",
+                                "TXZ242",
+                                "TXZ246"
+                            ],
+                            "SAME": [
+                                "048355",
+                                "048057",
+                                "048007",
+                                "048409",
+                                "048273",
+                                "048391"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T17:14:13+00:00",
+                        "effective": "2017-09-05T17:14:13+00:00",
+                        "onset": "2017-09-05T17:14:00+00:00",
+                        "expires": "2017-09-05T23:00:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Moderate",
+                        "certainty": "Observed",
+                        "urgency": "Expected",
+                        "event": "Special Weather Statement",
+                        "sender": "NWS Corpus Christi TX",
+                        "headline": "Special Weather Statement issued September 5 at 12:14PM CDT by NWS Corpus Christi TX",
+                        "description": "A tropical airmass along with light winds several thousand feet\nabove the surface will be conducive for the development of funnel\nclouds this afternoon. Most of these funnel clouds will be short\nlived. However, you should be prepared to seek shelter in the\nevent a funnel does reach the ground.",
+                        "instruction": "",
+                        "response": "Execute",
+                        "parameters": {
+                            "NWSheadline": [
+                                "POTENTIAL FOR FUNNEL CLOUDS AGAIN THIS AFTERNOON"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "CRPSPSCRP"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511947-2343287",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -93.63,
+                                    30.57
+                                ],
+                                [
+                                    -93.64,
+                                    30.11
+                                ],
+                                [
+                                    -93.78,
+                                    30.11
+                                ],
+                                [
+                                    -93.81,
+                                    30.31
+                                ],
+                                [
+                                    -93.78,
+                                    30.62
+                                ],
+                                [
+                                    -93.63,
+                                    30.57
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511947-2343287",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511947-2343287",
+                        "areaDesc": "Orange; Newton; Beauregard; Calcasieu",
+                        "geocode": {
+                            "UGC": [
+                                "TXC361",
+                                "TXC351",
+                                "LAC011",
+                                "LAC019"
+                            ],
+                            "SAME": [
+                                "048361",
+                                "048351",
+                                "022011",
+                                "022019"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511419-2342857"
+                        ],
+                        "sent": "2017-09-05T15:47:33+00:00",
+                        "effective": "2017-09-05T15:47:33+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:42:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Sabine River Near Deweyville.\n* until further notice...or until the warning is cancelled.\n* At  9:45 AM Tuesday the stage was 30.2 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 24.0 feet.\n* Forecast...The river will continue to fall to a stage of 29.3 feet\nby tomorrow morning.\n* Impact...At stages near 29.0 feet...Major flooding occurring\nleaving the town of Deweyville isolated. Numerous homes are\nflooded.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0096.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511936-2343276",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -94.45,
+                                    30.12
+                                ],
+                                [
+                                    -94.23,
+                                    30.24
+                                ],
+                                [
+                                    -94.07,
+                                    30.21
+                                ],
+                                [
+                                    -94.06,
+                                    30.13
+                                ],
+                                [
+                                    -94.45,
+                                    30.04
+                                ],
+                                [
+                                    -94.45,
+                                    30.12
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511936-2343276",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511936-2343276",
+                        "areaDesc": "Jefferson; Hardin",
+                        "geocode": {
+                            "UGC": [
+                                "TXC245",
+                                "TXC199"
+                            ],
+                            "SAME": [
+                                "048245",
+                                "048199"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511411-2342849"
+                        ],
+                        "sent": "2017-09-05T15:47:32+00:00",
+                        "effective": "2017-09-05T15:47:32+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:42:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Pine Island Bayou Near Sour Lake.\n* until further notice...or until the warning is cancelled.\n* At  9:45 AM Tuesday the stage was 32.7 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 25.0 feet.\n* Forecast...The river will continue to fall to a stage of 31.1 feet\nby tomorrow morning.\n* Impact...At stages near 32.0 feet...Major lowland flooding occurs.\nSeveral homes on Riverbend Drive in Bevil Oaks have water in them.\nWater reaches floor of bridge along Old Sour Lake Road.\n* Impact...At stages near 31.0 feet...Homes in the Bevil oaks and\nPinewood areas begin to flood.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0099.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511946-2343286",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -93.48,
+                                    31.04
+                                ],
+                                [
+                                    -93.5,
+                                    30.82
+                                ],
+                                [
+                                    -93.63,
+                                    30.53
+                                ],
+                                [
+                                    -93.83,
+                                    30.55
+                                ],
+                                [
+                                    -93.67,
+                                    30.78
+                                ],
+                                [
+                                    -93.61,
+                                    31.04
+                                ],
+                                [
+                                    -93.48,
+                                    31.04
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511946-2343286",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511946-2343286",
+                        "areaDesc": "Newton; Vernon; Beauregard",
+                        "geocode": {
+                            "UGC": [
+                                "TXC351",
+                                "LAC115",
+                                "LAC011"
+                            ],
+                            "SAME": [
+                                "048351",
+                                "022115",
+                                "022011"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511420-2342858"
+                        ],
+                        "sent": "2017-09-05T15:47:31+00:00",
+                        "effective": "2017-09-05T15:47:31+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:42:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Sabine River Near Bon Wier.\n* until further notice...or until the warning is cancelled.\n* At 10:15 AM Tuesday the stage was 36.1 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 30.0 feet.\n* Forecast...The river will continue to fall to a stage of 35.1 feet\nby tomorrow morning.\n* Impact...At stages near 36.0 feet...Major lowland flooding will\noccur. Sabine Sands Road has about one to three feet of water\ncovering the road.\n* Impact...At stages near 35.0 feet...Expect several secondary roads\nin the Merryville area near the river to be closed.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0109.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511934-2343274",
+                    "type": "Feature",
+                    "geometry": null,
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511934-2343274",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511934-2343274",
+                        "areaDesc": "Orange; Jefferson; Jasper; Hardin",
+                        "geocode": {
+                            "UGC": [
+                                "TXC361",
+                                "TXC245",
+                                "TXC241",
+                                "TXC199"
+                            ],
+                            "SAME": [
+                                "048361",
+                                "048245",
+                                "048241",
+                                "048199"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511413-2342851"
+                        ],
+                        "sent": "2017-09-05T15:47:30+00:00",
+                        "effective": "2017-09-05T15:47:30+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:42:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Neches River at Neches River Saltwater Barrier.\n* until further notice...or until the warning is cancelled.\n* At 10:00 AM Tuesday the stage was 15.8 feet.\n* Record flooding is occurring and Record flooding is forecast.\n* Flood stage is 4.0 feet.\n* Forecast...The river will continue to fall to a stage of 13.8 feet\nby tomorrow morning.\n* Impact...At stages near 10.0 feet...Major flooding along the river\nincluding Northwest Orange County From Lake View to the Saltwater\nBarrier with several homes and camps flooded. Flooding is also\noccurring along the river in Beaumont.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0097.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511931-2343271",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -94.17,
+                                    30.19
+                                ],
+                                [
+                                    -94.11,
+                                    30.23
+                                ],
+                                [
+                                    -93.78,
+                                    30.04
+                                ],
+                                [
+                                    -93.87,
+                                    29.92
+                                ],
+                                [
+                                    -94.06,
+                                    29.98
+                                ],
+                                [
+                                    -94.17,
+                                    30.19
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511931-2343271",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511931-2343271",
+                        "areaDesc": "Orange; Jefferson",
+                        "geocode": {
+                            "UGC": [
+                                "TXC361",
+                                "TXC245"
+                            ],
+                            "SAME": [
+                                "048361",
+                                "048245"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511416-2342854"
+                        ],
+                        "sent": "2017-09-05T15:47:28+00:00",
+                        "effective": "2017-09-05T15:47:28+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:42:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Neches River Near Beaumont.\n* until further notice...or until the warning is cancelled.\n* Flood stage is 4.0 feet.\n* Impact...At stages near 13.0 feet...River is near flood of record\nwhich occurred october 1994. Widespread major flooding is\noccurring. Numerous homes in Northeast Beaumont and Rose City are\nflooded.\n* Impact...At stages near 11.5 feet...Major flooding is occurring.\nRiver levels are near those reached during Tropical Storm Allison\nin 1989. Several streets in Northeast Beaumont are flooded and\nimpassable and water is in homes near the river. Neighborhoods on\nthe north side of Interstate 10 in Rose City are flooded with water\nin approximately 4 homes.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0098.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511938-2343278",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -94.15,
+                                    30.99
+                                ],
+                                [
+                                    -93.99,
+                                    30.53
+                                ],
+                                [
+                                    -94.18,
+                                    30.53
+                                ],
+                                [
+                                    -94.2,
+                                    30.79
+                                ],
+                                [
+                                    -94.32,
+                                    30.96
+                                ],
+                                [
+                                    -94.15,
+                                    30.99
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511938-2343278",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511938-2343278",
+                        "areaDesc": "Tyler; Jasper",
+                        "geocode": {
+                            "UGC": [
+                                "TXC457",
+                                "TXC241"
+                            ],
+                            "SAME": [
+                                "048457",
+                                "048241"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511402-2342840"
+                        ],
+                        "sent": "2017-09-05T15:47:26+00:00",
+                        "effective": "2017-09-05T15:47:26+00:00",
+                        "onset": "2017-09-05T15:43:00+00:00",
+                        "expires": "2017-09-06T05:43:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Lake Charles LA",
+                        "headline": "Flood Warning issued September 5 at 10:43AM CDT by NWS Lake Charles LA",
+                        "description": "Calcasieu River Near Oakdale\n\n...The Flood Warning has expired for the following rivers in\nLouisiana...\n\nBayou Anacoco Near Rosepine\n...The Flood Warning continues for the following rivers in\nLouisiana...\n\nCalcasieu River Near Glenmora\nCalcasieu River Near Oberlin\nCalcasieu River Near Kinder\nVermilion River At Lafayette, Surrey Street Gage\n\n...The Flood Warning continues for the following rivers in\nLouisiana...Texas..\nWest Fork Of The Calcasieu River At Sam Houston Jones State Park\nCalcasieu River At Old Town Bay\nCalcasieu River Near Salt Water Barrier\nMermentau River Near Mermentau\nSabine River Near Bon Wier\nSabine River Near Deweyville\nSabine River Near Orange\nNeches River Near Town Bluff\nNeches River Near Evadale\nNeches River at Neches River Saltwater Barrier\nNeches River Near Beaumont\nPine Island Bayou Near Sour Lake\nThe Flood Warning continues for\nThe Neches River Near Town Bluff.\n* until further notice...or until the warning is cancelled.\n* At  9:00 AM Tuesday the stage was 75.6 feet.\n* Moderate flooding is occurring and Moderate flooding is forecast.\n* Flood stage is 68.0 feet.\n* Forecast...The river will remain near 75.5 feet.\n* Impact...At stages near 73.0 feet...Flooding expected in the Mont\nNeches, Barlow Lake and Sheffields Ferry communities. Some homes\nmay become flooded as well, especially in the Barlow Lake\ncommunity.",
+                        "instruction": "",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KLCH.FL.W.0110.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "LCHFLSLCH"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511851-2343224",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.64,
+                                    29.79
+                                ],
+                                [
+                                    -95.53,
+                                    29.79
+                                ],
+                                [
+                                    -95.53,
+                                    29.72
+                                ],
+                                [
+                                    -95.64,
+                                    29.75
+                                ],
+                                [
+                                    -95.64,
+                                    29.79
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511851-2343224",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511851-2343224",
+                        "areaDesc": "Harris",
+                        "geocode": {
+                            "UGC": [
+                                "TXC201"
+                            ],
+                            "SAME": [
+                                "048201"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511494-2342918"
+                        ],
+                        "sent": "2017-09-05T14:13:43+00:00",
+                        "effective": "2017-09-05T14:13:43+00:00",
+                        "onset": "2017-09-05T14:13:00+00:00",
+                        "expires": "2017-09-06T14:13:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 9:13AM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Buffalo Bayou.\nThe Flood Warning continues for\nThe Buffalo Bayou In West Belt Drive\n* until further notice...or until the warning is canceled.\n* At 0830 AM Tuesday the stage was 68.3 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 62.2 feet.\n* Forecast...The river will continue to fall to a stage of 67.7 feet by Wednesday morning.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KHGX.FL.W.0089.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511852-2343225",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.64,
+                                    29.79
+                                ],
+                                [
+                                    -95.46,
+                                    29.79
+                                ],
+                                [
+                                    -95.46,
+                                    29.73
+                                ],
+                                [
+                                    -95.64,
+                                    29.75
+                                ],
+                                [
+                                    -95.64,
+                                    29.79
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511852-2343225",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511852-2343225",
+                        "areaDesc": "Harris",
+                        "geocode": {
+                            "UGC": [
+                                "TXC201"
+                            ],
+                            "SAME": [
+                                "048201"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511493-2342917"
+                        ],
+                        "sent": "2017-09-05T14:13:43+00:00",
+                        "effective": "2017-09-05T14:13:43+00:00",
+                        "onset": "2017-09-05T14:13:00+00:00",
+                        "expires": "2017-09-06T14:13:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 9:13AM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Buffalo Bayou.\nThe Flood Warning continues for\nThe Buffalo Bayou Near Piney Point Village\n* until further notice...or until the warning is canceled.\n* At 0846 AM Tuesday the stage was 58.8 feet.\n* Moderate flooding is occurring and Moderate flooding is forecast.\n* Flood stage is 52.0 feet.\n* Forecast...The river will continue to fall to a stage of 57.9 feet by .\n* At 59.3 feet...At levels above 59.3 the bridge at Briar Forest SW is\ninundated.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KHGX.FL.W.0073.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511840-2343216",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -94.7,
+                                    29.96
+                                ],
+                                [
+                                    -94.66,
+                                    29.79
+                                ],
+                                [
+                                    -94.79,
+                                    29.79
+                                ],
+                                [
+                                    -94.87,
+                                    29.96
+                                ],
+                                [
+                                    -94.7,
+                                    29.96
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511840-2343216",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511840-2343216",
+                        "areaDesc": "Chambers; Liberty",
+                        "geocode": {
+                            "UGC": [
+                                "TXC071",
+                                "TXC291"
+                            ],
+                            "SAME": [
+                                "048071",
+                                "048291"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511453-2342886"
+                        ],
+                        "sent": "2017-09-05T13:42:20+00:00",
+                        "effective": "2017-09-05T13:42:20+00:00",
+                        "onset": "2017-09-05T13:42:00+00:00",
+                        "expires": "2017-09-06T13:42:00+00:00",
+                        "ends": "2017-09-08T01:30:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:42AM CDT expiring September 7 at 8:30PM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Trinity River.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.EXT.KHGX.FL.W.0158.000000T0000Z-170908T0130Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-08T01:30:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511841-2343217",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -94.75,
+                                    30.27
+                                ],
+                                [
+                                    -94.7,
+                                    29.96
+                                ],
+                                [
+                                    -94.87,
+                                    29.96
+                                ],
+                                [
+                                    -94.89,
+                                    30.27
+                                ],
+                                [
+                                    -94.75,
+                                    30.27
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511841-2343217",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511841-2343217",
+                        "areaDesc": "Chambers; Liberty",
+                        "geocode": {
+                            "UGC": [
+                                "TXC071",
+                                "TXC291"
+                            ],
+                            "SAME": [
+                                "048071",
+                                "048291"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511452-2342885"
+                        ],
+                        "sent": "2017-09-05T13:42:20+00:00",
+                        "effective": "2017-09-05T13:42:20+00:00",
+                        "onset": "2017-09-05T13:42:00+00:00",
+                        "expires": "2017-09-06T04:42:00+00:00",
+                        "ends": "2017-09-06T04:42:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:42AM CDT expiring September 5 at 11:42PM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Trinity River.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.EXT.KHGX.FL.W.0157.000000T0000Z-170906T0442Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-06T04:42:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511838-2343214",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.49,
+                                    29.43
+                                ],
+                                [
+                                    -95.52,
+                                    29.32
+                                ],
+                                [
+                                    -95.52,
+                                    29.19
+                                ],
+                                [
+                                    -95.63,
+                                    29.19
+                                ],
+                                [
+                                    -95.66,
+                                    29.32
+                                ],
+                                [
+                                    -95.61,
+                                    29.43
+                                ],
+                                [
+                                    -95.49,
+                                    29.43
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511838-2343214",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511838-2343214",
+                        "areaDesc": "Fort Bend; Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC157",
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048157",
+                                "048039"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511447-2342880"
+                        ],
+                        "sent": "2017-09-05T13:41:06+00:00",
+                        "effective": "2017-09-05T13:41:06+00:00",
+                        "onset": "2017-09-05T13:40:00+00:00",
+                        "expires": "2017-09-06T13:40:00+00:00",
+                        "ends": "2017-09-08T17:52:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:40AM CDT expiring September 8 at 12:52PM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Brazos River.\nThe Flood Warning continues for\nThe Brazos River near Rosharon\n* until Friday afternoon...or until the warning is canceled.\n* At 0816 AM Tuesday the stage was 51.8 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 43.0 feet.\n* Forecast...The river will continue to fall to below flood stage by early\nFriday morning.\n* At 52.0 feet...Major lowland flooding continues with massive inundation of the\nBrazos River and Oyster Creek flood plains below FM 1462. Homes in the\nColumbia Lakes...Mallard Lakes...and Great Lakes subdivisions near West\nColumbia begin flooding.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.EXT.KHGX.FL.W.0174.000000T0000Z-170908T1752Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-08T17:52:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511839-2343215",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.52,
+                                    29.19
+                                ],
+                                [
+                                    -95.55,
+                                    29.14
+                                ],
+                                [
+                                    -95.41,
+                                    29.02
+                                ],
+                                [
+                                    -95.55,
+                                    29.02
+                                ],
+                                [
+                                    -95.66,
+                                    29.14
+                                ],
+                                [
+                                    -95.63,
+                                    29.19
+                                ],
+                                [
+                                    -95.52,
+                                    29.19
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511839-2343215",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511839-2343215",
+                        "areaDesc": "Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048039"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511449-2342882"
+                        ],
+                        "sent": "2017-09-05T13:41:06+00:00",
+                        "effective": "2017-09-05T13:41:06+00:00",
+                        "onset": "2017-09-05T13:40:00+00:00",
+                        "expires": "2017-09-06T13:40:00+00:00",
+                        "ends": "2017-09-09T12:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:40AM CDT expiring September 9 at 7:00AM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Brazos River.\nThe Flood Warning continues for\nThe Brazos River Near West Columbia\n* until Saturday morning...or until the warning is canceled.\n* At 0831 AM Tuesday the stage was 30.3 feet.\n* Minor flooding is occurring and Minor flooding is forecast.\n* Flood stage is 30.0 feet.\n* At 30.0 feet...At levels above 30 feet minor lowland flooding begins with the\nbridge at County Road 25 over Cow Creek inundated.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KHGX.FL.W.0170.000000T0000Z-170909T1200Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-09T12:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511837-2343213",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.66,
+                                    29.13
+                                ],
+                                [
+                                    -95.54,
+                                    29.02
+                                ],
+                                [
+                                    -95.43,
+                                    28.88
+                                ],
+                                [
+                                    -95.53,
+                                    28.88
+                                ],
+                                [
+                                    -95.65,
+                                    29.02
+                                ],
+                                [
+                                    -95.77,
+                                    29.13
+                                ],
+                                [
+                                    -95.66,
+                                    29.13
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511837-2343213",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511837-2343213",
+                        "areaDesc": "Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048039"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511431-2342865"
+                        ],
+                        "sent": "2017-09-05T13:38:15+00:00",
+                        "effective": "2017-09-05T13:38:15+00:00",
+                        "onset": "2017-09-05T13:37:00+00:00",
+                        "expires": "2017-09-06T13:37:00+00:00",
+                        "ends": "2017-09-10T03:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:37AM CDT expiring September 9 at 10:00PM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the San Bernard River.\nThe Flood Warning continues for\nThe San Bernard River near Sweeny\n* until Saturday evening...or until the warning is canceled.\n* Flood stage is 16.0 feet.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.EXT.KHGX.FL.W.0043.000000T0000Z-170910T0300Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-10T03:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511836-2343212",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.92,
+                                    29.4
+                                ],
+                                [
+                                    -95.84,
+                                    29.3
+                                ],
+                                [
+                                    -95.66,
+                                    29.13
+                                ],
+                                [
+                                    -95.77,
+                                    29.13
+                                ],
+                                [
+                                    -95.95,
+                                    29.3
+                                ],
+                                [
+                                    -96.05,
+                                    29.4
+                                ],
+                                [
+                                    -95.92,
+                                    29.4
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511836-2343212",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511836-2343212",
+                        "areaDesc": "Fort Bend; Wharton; Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC157",
+                                "TXC481",
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048157",
+                                "048481",
+                                "048039"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511432-2342866"
+                        ],
+                        "sent": "2017-09-05T13:38:15+00:00",
+                        "effective": "2017-09-05T13:38:15+00:00",
+                        "onset": "2017-09-05T13:37:00+00:00",
+                        "expires": "2017-09-06T13:37:00+00:00",
+                        "ends": null,
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 5 at 8:37AM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the San Bernard River.\nThe Flood Warning continues for\nThe San Bernard River Near Boling\n* until further notice...or until the warning is canceled.\n* At 0815 AM Tuesday the stage was 36.8 feet.\n* Major flooding is occurring and Major flooding is forecast.\n* Flood stage is 18.0 feet.\n* Forecast...The river will continue to fall to a stage of 32.4 feet by .",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KHGX.FL.W.0042.000000T0000Z-000000T0000Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511443-2342877",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -97.04,
+                                    28.69
+                                ],
+                                [
+                                    -96.98,
+                                    28.69
+                                ],
+                                [
+                                    -96.95,
+                                    28.67
+                                ],
+                                [
+                                    -96.88,
+                                    28.57
+                                ],
+                                [
+                                    -96.8,
+                                    28.45
+                                ],
+                                [
+                                    -96.85,
+                                    28.43
+                                ],
+                                [
+                                    -97.04,
+                                    28.69
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511443-2342877",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511443-2342877",
+                        "areaDesc": "Refugio; Victoria; Calhoun",
+                        "geocode": {
+                            "UGC": [
+                                "TXC391",
+                                "TXC469",
+                                "TXC057"
+                            ],
+                            "SAME": [
+                                "048391",
+                                "048469",
+                                "048057"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-05T01:30:05+00:00",
+                        "effective": "2017-09-05T01:30:05+00:00",
+                        "onset": "2017-09-05T01:29:00+00:00",
+                        "expires": "2017-09-05T19:29:00+00:00",
+                        "ends": "2017-09-08T13:36:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Corpus Christi TX",
+                        "headline": "Flood Warning issued September 4 at 8:29PM CDT expiring September 8 at 8:36AM CDT by NWS Corpus Christi TX",
+                        "description": "Guadalupe River Near Bloomington affecting Calhoun...Refugio and\nVictoria Counties\n\n.Recent or anticipated rainfall over the area will keep the\naforementioned river above flood stage for the next few days.\nThese river forecasts are based on forecast rainfall over the\narea, and are subject to change with rainfall forecasts.\nThe Flood Warning continues for the Guadalupe River near Bloomington.\n* until Thursday afternoon, or until the warning is cancelled.\n* At 8 PM Monday, the stage was 25.5 feet.\n* Moderate flooding is occurring and Moderate flooding is forecast.\n* Flood stage is 20.0 feet.\n* Forecast: The river will continue to fall, dropping below flood\nstage Thursday afternoon.\n* At 26.0 feet, irrigation and oil well pumps, tank batteries, and\nequipment in the lower flood plain below Victoria flood. Livestock\nare cut off, may have to be fed by boat, and could drown. Homes\ndownstream above Highway 35 on the left bank are cut off.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nStay tuned to NOAA Weather Radio, local TV and radio\nstations, or cable TV outlets, for the latest weather\ninformation, as additional rainfall could affect crest\nforecasts.\n\nFor the latest river stages and forecasts visit our AHPS page at:\nhttp://water.weather.gov/ahps2/index.php?wfo=crp",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.CON.KCRP.FL.W.0020.000000T0000Z-170908T1336Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "CRPFLSCRP"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-08T13:36:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511141-2342642",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.64,
+                                    29.79
+                                ],
+                                [
+                                    -95.64,
+                                    29.74
+                                ],
+                                [
+                                    -95.65,
+                                    29.73
+                                ],
+                                [
+                                    -95.69,
+                                    29.71
+                                ],
+                                [
+                                    -95.75,
+                                    29.7
+                                ],
+                                [
+                                    -95.75,
+                                    29.72
+                                ],
+                                [
+                                    -95.69,
+                                    29.78
+                                ],
+                                [
+                                    -95.71,
+                                    29.79
+                                ],
+                                [
+                                    -95.7,
+                                    29.81
+                                ],
+                                [
+                                    -95.68,
+                                    29.81
+                                ],
+                                [
+                                    -95.68,
+                                    29.84
+                                ],
+                                [
+                                    -95.63,
+                                    29.84
+                                ],
+                                [
+                                    -95.63,
+                                    29.86
+                                ],
+                                [
+                                    -95.58,
+                                    29.85
+                                ],
+                                [
+                                    -95.57,
+                                    29.81
+                                ],
+                                [
+                                    -95.59,
+                                    29.79
+                                ],
+                                [
+                                    -95.64,
+                                    29.79
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511141-2342642",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511141-2342642",
+                        "areaDesc": "Fort Bend; Harris",
+                        "geocode": {
+                            "UGC": [
+                                "TXC157",
+                                "TXC201"
+                            ],
+                            "SAME": [
+                                "048157",
+                                "048201"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-04T20:59:01+00:00",
+                        "effective": "2017-09-04T20:59:01+00:00",
+                        "onset": "2017-09-04T20:58:00+00:00",
+                        "expires": "2017-09-06T21:00:00+00:00",
+                        "ends": "2017-09-06T21:00:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 4 at 3:58PM CDT expiring September 6 at 4:00PM CDT by NWS Houston/Galveston TX",
+                        "description": "The National Weather Service in League City has issued a\n\n* Flood Warning for...\nNorthern Fort Bend County in southeastern Texas...\nWest central Harris County in southeastern Texas...\n\n* Until 400 PM CDT Wednesday.\n\n* At 353 PM CDT, Harris County Flood Control confirmed flooding was\nstill ongoing around Addicks and Barker Reservoirs. As of Monday\nafternoon, Addicks Reservoir's latest elevation was 105.85 feet\nand Barker Reservoir's latest elevation was 98.14 feet. Both\nreservoirs were showing a decreasing trend in pool elevation.\n\n* Some locations that will experience flooding include...\nAddicks Park Ten, Eldridge / West Oaks, Spring Branch West, and\nMemorial.",
+                        "instruction": "A Flood Warning means that flooding is imminent or occurring. All\ninterested parties should take necessary precautions immediately.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.NEW.KHGX.FA.W.0016.170904T2058Z-170906T2100Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLWHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-06T21:00:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511051-2342565",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -96.01,
+                                    29.84
+                                ],
+                                [
+                                    -95.66,
+                                    29.58
+                                ],
+                                [
+                                    -95.49,
+                                    29.43
+                                ],
+                                [
+                                    -95.61,
+                                    29.43
+                                ],
+                                [
+                                    -95.87,
+                                    29.58
+                                ],
+                                [
+                                    -96.19,
+                                    29.84
+                                ],
+                                [
+                                    -96.01,
+                                    29.84
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511051-2342565",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2511051-2342565",
+                        "areaDesc": "Fort Bend; Austin; Waller; Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC157",
+                                "TXC015",
+                                "TXC473",
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048157",
+                                "048015",
+                                "048473",
+                                "048039"
+                            ]
+                        },
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2510824-2342367"
+                        ],
+                        "sent": "2017-09-04T19:19:31+00:00",
+                        "effective": "2017-09-04T19:19:31+00:00",
+                        "onset": "2017-09-04T19:19:00+00:00",
+                        "expires": "2017-09-05T19:18:00+00:00",
+                        "ends": "2017-09-05T19:18:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Update",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Observed",
+                        "urgency": "Immediate",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 4 at 2:19PM CDT expiring September 5 at 2:18PM CDT by NWS Houston/Galveston TX",
+                        "description": "A river flood warning remains in effect for the Brazos River.\nThe Flood Warning continues for\nThe Brazos River In Richmond\n* until Tuesday afternoon...or until the warning is canceled.\n* At 0115 PM Monday the stage was 48.8 feet.\n* Moderate flooding is occurring and Minor flooding is forecast.\n* Flood stage is 45.0 feet.\n* Forecast...The river will continue to fall to below flood stage by after\nmidnight tomorrow.\n* At 49.0 feet...Moderate lowland flooding continues. Widespread inundation of\nthe floodplain occurs with homes in Simonton and Thompsons flooded. FM 1458\nnear FM 1093 in Austin County is flooded with one foot of water. Six inches to\none foot of water covers Strange Drive...Greenwood Drive...and Second Street\nin Richmond and Sixth Street...Avenue B...and River Road in Rosenberg. Pittman\nRoad in Thompsons is inundated and homes along Carrol and McKeever Roads near\nFM 2759 in southeast Fort Bend County are threatened.",
+                        "instruction": "PRECAUTIONARY/PREPAREDNESS ACTIONS...\n\nPersons are urged to stay away from the river until water levels recede.\n\nMotorists should avoid any water covered roads and find an alternate route.\n\nLivestock and equipment should remain out of the flood plain for the next few\ndays.\n\n\n\nStay tuned to NOAA Weather radio or other news sources for further updates.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.EXT.KHGX.FL.W.0160.000000T0000Z-170905T1918Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLSHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-05T19:18:00Z"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2508321-2340174",
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    -95.58,
+                                    28.86
+                                ],
+                                [
+                                    -95.68,
+                                    28.97
+                                ],
+                                [
+                                    -95.77,
+                                    28.97
+                                ],
+                                [
+                                    -95.77,
+                                    29.06
+                                ],
+                                [
+                                    -95.84,
+                                    29.1
+                                ],
+                                [
+                                    -95.84,
+                                    29.18
+                                ],
+                                [
+                                    -95.87,
+                                    29.23
+                                ],
+                                [
+                                    -95.75,
+                                    29.32
+                                ],
+                                [
+                                    -95.63,
+                                    29.29
+                                ],
+                                [
+                                    -95.58,
+                                    29.34
+                                ],
+                                [
+                                    -95.54,
+                                    29.4
+                                ],
+                                [
+                                    -95.55,
+                                    29.44
+                                ],
+                                [
+                                    -95.48,
+                                    29.44
+                                ],
+                                [
+                                    -95.45,
+                                    29.09
+                                ],
+                                [
+                                    -95.38,
+                                    29.06
+                                ],
+                                [
+                                    -95.38,
+                                    28.94
+                                ],
+                                [
+                                    -95.31,
+                                    28.92
+                                ],
+                                [
+                                    -95.38,
+                                    28.86
+                                ],
+                                [
+                                    -95.5,
+                                    28.83
+                                ],
+                                [
+                                    -95.57,
+                                    28.83
+                                ],
+                                [
+                                    -95.58,
+                                    28.86
+                                ]
+                            ]
+                        ]
+                    },
+                    "properties": {
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2508321-2340174",
+                        "@type": "wx:Alert",
+                        "id": "NWS-IDP-PROD-2508321-2340174",
+                        "areaDesc": "Brazoria",
+                        "geocode": {
+                            "UGC": [
+                                "TXC039"
+                            ],
+                            "SAME": [
+                                "048039"
+                            ]
+                        },
+                        "references": [],
+                        "sent": "2017-09-01T16:23:41+00:00",
+                        "effective": "2017-09-01T16:23:41+00:00",
+                        "onset": "2017-09-01T16:23:00+00:00",
+                        "expires": "2017-09-08T16:15:00+00:00",
+                        "ends": "2017-09-08T16:15:00+00:00",
+                        "status": "Actual",
+                        "messageType": "Alert",
+                        "category": "Met",
+                        "severity": "Severe",
+                        "certainty": "Likely",
+                        "urgency": "Expected",
+                        "event": "Flood Warning",
+                        "sender": "NWS Houston/Galveston TX",
+                        "headline": "Flood Warning issued September 1 at 11:23AM CDT expiring September 8 at 11:15AM CDT by NWS Houston/Galveston TX",
+                        "description": "The National Weather Service in League City has issued a\n\n* Flood Warning for...\nWestern Brazoria County in southeastern Texas...\n\n* Until 1115 AM CDT Friday.\n\n* At 1111 AM CDT, emergency management officials reported flooding\noccurring in western Brazoria County from ongoing river flooding\nalong the Brazos and San Bernard Rivers. Additional flooding is\nexpected over the next several days as flood waters from Harvey\ndrain across the county. This Areal Flood Warning is in addition\nto ongoing flood warnings along the Brazos and San Bernard Rivers.\n\n* Evacuation orders can be found on websites for Brazoria County and\nthe cities included below. Please check with local officials on if\nyour community is subject to evacuation and for information on\nrecommended routes or shelters. If you are under a mandatory\nevacuation and cannot get a ride with friends, neighbors, or\nfamily, you may register in advance for a ride by calling 2-1-1.\n\n* Some locations that will experience flooding include...\nLake Jackson, southwestern Freeport, Clute, West Columbia, Sweeny,\nRichwood, Brazoria, Jones Creek, Holiday Lakes, Bailey's Prairie,\nBonney, Wild Peach Village and Damon.",
+                        "instruction": "Stay away or be swept away. River banks and culverts can become\nunstable and unsafe.\n\nA Flood Warning means that flooding is imminent or occurring. All\ninterested parties should take necessary precautions immediately.",
+                        "response": "Avoid",
+                        "parameters": {
+                            "VTEC": [
+                                "/O.NEW.KHGX.FA.W.0015.170901T1623Z-170908T1615Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
+                            ],
+                            "PIL": [
+                                "HGXFLWHGX"
+                            ],
+                            "BLOCKCHANNEL": [
+                                "CMAS",
+                                "EAS",
+                                "NWEM"
+                            ],
+                            "eventEndingTime": [
+                                "2017-09-08T16:15:00Z"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "title": "Current watches, warnings, and advisories for Texas"
+        }
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 18:14:46 GMT
+recorded_with: VCR 3.0.3
