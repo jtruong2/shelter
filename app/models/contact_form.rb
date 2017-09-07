@@ -5,7 +5,7 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      to: ENV["GMAIL"],
+      to: 'homesshelter@gmail.com',
       from: %("#{name}" <#{email}>)
     }
   end
