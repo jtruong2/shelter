@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     user = User.create(safe_params)
     if user.save
       session[:user_id] = user.id
+      UserMailer.welcome_email(user).deliver_now
       redirect_to root_path
     else
       redirect_to new_user_path

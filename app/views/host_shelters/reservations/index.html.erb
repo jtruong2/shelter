@@ -1,0 +1,9 @@
+<h1>Cancelled Reservations</h1>
+<h3>Address: <%= @property.street_address %></h3>
+  <% @property.reservations.cancelled.each do |reservation| %>
+   <p class="cancelled">
+     User: <%= reservation.user_id %>,<br>
+     Room Request: <%= reservation.room_request %><br>
+     Cancel Date: <%= reservation.updated_at %>
+   </p>
+  <% end %>
