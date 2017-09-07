@@ -16,7 +16,7 @@ save_and_open_page
 #I see a list of complete requests for my property
     expect(page).to have_css(".complete", :count =>1)
 #I see the current occupancy for my property
-    expect(page).to have_field("Rooms Available", 4)
+    expect(page).to have_content("Rooms Available", 3)
 #And I can click on "Accept" to approve the reservation
     click_button "Accept", :first
 #And the status for the reservation will be updated

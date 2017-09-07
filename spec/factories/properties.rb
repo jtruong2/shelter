@@ -1,8 +1,10 @@
  FactoryGirl.define do
    factory :property do
-     street_address "MyString"
-     city "MyString"
-     state "MyString"
+     sequence :street_address do |x|
+      "#{x} Sesame Street"
+     end
+     city "Gotham City"
+     state "MN"
      rooms_available 1
      user
 
