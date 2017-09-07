@@ -12,11 +12,25 @@ function initMap() {
 }
 
 function setMarkers(map) {
+  var image = {
+    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    size: new google.maps.Size(20, 32),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32)
+  };
+
+  var shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: 'poly'
+  };
+
   for (var i = 0; i < properties.length; i++) {
     var property = properties[i];
     var marker = new google.maps.Marker({
       position: {lat: property[0], lng: property[1]},
-      map: map
+      map: map,
+      icon: image,
+      shape: shape,
     });
   }
 }
