@@ -30,6 +30,18 @@ class HostShelters::PropertiesController < HostShelters::HostSheltersController
     redirect_to host_shelters_properties_path
   end
 
+  def status_cancelled
+    property = Property.find(params[:property_id])
+    property.cancelled!
+    redirect_to host_shelters_properties_path
+  end
+
+  def status_complete
+    property = Property.find(params[:property_id])
+    property.complete!
+    redirect_to host_shelters_properties_path
+  end
+
  private
 
   def safe_params

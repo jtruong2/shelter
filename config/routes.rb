@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     get '/sign_up', to: 'properties#new'
     resources :properties, only: [:create, :new, :index] do
       post "status_accepted", :action => :status_accepted
+      post "status_cancelled", :action => :status_cancelled
+      post "status_complete", :action => :status_complete
     end
     get '/:id', to: 'properties#show'
   end
