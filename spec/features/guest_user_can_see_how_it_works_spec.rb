@@ -13,6 +13,7 @@ RSpec.describe "Guest Visits Home Page" do
   it "clicks on about link" do
     visit '/'
 
+
     click_button "About"
 
     expect(current_path).to eq about_path
