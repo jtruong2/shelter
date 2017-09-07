@@ -18,6 +18,7 @@ gem 'faraday'
 gem 'bcrypt', '~> 3.1.7'
 gem 'mail'
 gem 'mail_form'
+gem 'omniauth-facebook'
 gem 'geocoder'
 gem 'gmaps4rails'
 

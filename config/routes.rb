@@ -12,9 +12,12 @@ Rails.application.routes.draw do
   delete '/login', to: 'sessions#destroy'
   delete 'logout', to: 'sessions#destroy'
   get 'logout', to: 'sessions#destroy'
-  get '/auth/google/callback', to: 'sessions#create'
 
+  get '/auth/google/callback', to: 'sessions#create'
   get '/auth/google', as: 'google_login'
+
+  get '/auth/facebook/callback', to: 'sessions#create'
+  get '/auth/facebook', as: 'facebook_login'
 
   namespace :host_shelters do
     get '/sign_up', to: 'properties#new'

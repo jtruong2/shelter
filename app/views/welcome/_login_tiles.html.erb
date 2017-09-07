@@ -1,0 +1,38 @@
+<h1>Welcome to Shelter, a community based app for those in need and those wanting to help.<br />
+Please click one of the options below to log in.</h1>
+
+<section class="tiles">
+  <article class="style1">
+    <span class="image">
+      <%= image_tag "g.png" %>
+    </span>
+    <a href="<%= google_login_path %>">
+      <h2>Google</h2>
+      <div class="content">
+        <p>Use Google Authentication to sign in.</p>
+      </div>
+    </a>
+  </article>
+  <article class="style2">
+    <span class="image">
+      <%= image_tag "fb.png" %>
+    </span>
+      <a href="<%= facebook_login_path %>">
+      <h2>Facebook</h2>
+      <div class="content">
+        <p>Use Facebook Authentication to sign in.</p>
+      </div>
+    </a>
+  </article>
+  <article class="style3">
+    <span class="image">
+      <%= image_tag "typing.png" %>
+    </span>
+    <a href="<%= login_path %>">
+      <h2>Manual</h2>
+      <div class="content">
+        <p>Sign in manually to access the app.</p>
+      </div>
+    </a>
+  </article>
+</section>
