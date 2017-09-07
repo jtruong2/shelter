@@ -1,46 +1,70 @@
 require 'rails_helper'
 
 RSpec.feature "Property owner" do
-  scenario "views pending reservations for property and can change status" do
-    user = create(:user_with_properties_and_roles)
-    
+  scenario "views properties and approves reservations" do
+    role = create(:role, name: "user")
+    role2 = create(:role, name: "owner")
+    user = create(:user)
+    user2 = create(:user)
+    user.roles << role2
+    property = create(:property, user_id: user.id)
+    reservation = create(:reservation, user_id: user2.id, property_id: property.id) 
+
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    
+    visit '/host_shelters/properties'
 
-    visit "/host_shelters/properties"
-
-    expect(page).to have_css("p.approved", :count => 1)
-    expect(page).to have_css("p.pending", :count => 1)
-    expect(page).to have_css("p.complete", :count =>1)
-    expect(page).to have_content("Rooms Available", 3)
+    expect(current_path).to eq(host_shelters_properties_path)
+    expect(page).to have_css("p.pending")
+    expect(page).to have_button("Approve")
+    expect(page).to have_button("Cancel")
 
     click_button "Approve"
 
-#And the occupancy will be updated based on the size of the party in the "Accepted" reservation
-
-    expect(page).to have_css("p.approved", :count => 2)
+    expect(page).to have_css("p.approved")
+    expect(page).to have_button("Complete")
   end
 
-  scenario "views approved reservations and can change status" do
-    user = create(:user_with_properties_and_roles)
+  scenario "views properties and cancels reservations" do
+    role = create(:role, name: "user")
+    role2 = create(:role, name: "owner")
+    user = create(:user)
+    user2 = create(:user)
+    user.roles << role2
+    property = create(:property, user_id: user.id)
+    reservation = create(:reservation, user_id: user2.id, property_id: property.id) 
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    
+    visit '/host_shelters/properties'
+    
+    click_on "Cancel"
 
-    visit "/host_shelters/properties"
+    expect(page).to_not have_css("p.approved")
 
-    expect(page).to have_css("p.approved", :count => 1)
-    expect(page).to have_css("p.pending", :count => 1)
-    expect(page).to have_css("p.complete", :count =>1)
-    expect(page).to have_content("Rooms Available", 3)
+    click_on "Cancelled Requests"
 
-    click_on "Complete"
-save_and_open_page
-    expect(page).to have_css("p.pending", :count => 1)
-#And I can click on "Complete" on an accepted reservation
-    click_button "Complete", :first
-#And the status on the reservation will change
-    expect(page).to have_css("p.complete", :count => 3)
-#And I can click on "Cancel" on a pending reservation to cancel the reservation
-    click_button "Cancel", :first
-#And the reservation will be removed from my property
+    expect(page).to have_css("p.cancelled")
+  end
+
+  scenario "views properties and completes reservations" do
+    role = create(:role, name: "user")
+    role2 = create(:role, name: "owner")
+    user = create(:user)
+    user2 = create(:user)
+    user.roles << role2
+    property = create(:property, user_id: user.id)
+    reservation = create(:reservation, user_id: user2.id, property_id: property.id) 
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    
+    visit '/host_shelters/properties'
+
+    click_button "Approve"
+    click_button "Complete"
+
+    expect(page).to have_css("p.completed")
+    expect(page).to_not have_css("p.pending")
+    expect(page).to_not have_css("p.approved")
   end
 end
