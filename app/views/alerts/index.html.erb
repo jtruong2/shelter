@@ -1,0 +1,10 @@
+<% @alerts.each do |alert| %>
+  <ul class="alert">
+    <li class="event"><strong>Event: </strong><%= alert.event %></li>
+    <li class="headline"><strong>Headline: </strong><%= alert.headline %></li>
+    <li class="description"><strong>Description: </strong><%= alert.description %></li>
+    <li class="instructions"><strong>Instruction: </strong><%= alert.instructions %></li>
+    <li class="severity"><strong>Severity: </strong><%= alert.severity %></li>
+    <li class="urgency"><strong>Urgency: </strong><%= alert.urgency %></li>
+  </ul>
+<% end %>
