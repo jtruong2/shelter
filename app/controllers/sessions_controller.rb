@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-
   end
 
   def create
@@ -11,8 +10,13 @@ class SessionsController < ApplicationController
     elsif params
       user = User.find_by(email: params[:session]["email"])
       user && user.authenticate(params[:session]["password"])
-      session[:user_id] = user.id
-      redirect_to root_path
+      if user == nil
+        flash[:notice] = "You do not have an account."
+        redirect_to root_path
+      else
+        session[:user_id] = user.id
+        redirect_to root_path
+      end
     else
       redirect_to root_path
     end
