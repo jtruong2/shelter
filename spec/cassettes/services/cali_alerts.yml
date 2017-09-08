@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.13.0
+      - Faraday v0.12.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -31,15 +31,15 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Server-Id:
-      - vm-bldr-nids-apiapp148.ncep.noaa.gov
+      - vm-bldr-nids-apiapp172.ncep.noaa.gov
       X-Correlation-Id:
-      - 27e2cee6-cf19-4551-80f7-3ebed4977157
+      - 19b0a4a1-18ba-4860-ab61-46592bc3cf1a
       X-Request-Id:
-      - 27e2cee6-cf19-4551-80f7-3ebed4977157
+      - 19b0a4a1-18ba-4860-ab61-46592bc3cf1a
       Date:
-      - Tue, 05 Sep 2017 18:20:53 GMT
+      - Fri, 08 Sep 2017 14:43:37 GMT
       Content-Length:
-      - '6729'
+      - '9682'
       Connection:
       - keep-alive
       Vary:
@@ -58,53 +58,73 @@ http_interactions:
             "type": "FeatureCollection",
             "features": [
                 {
-                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511993-2343318",
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2514475-2345300",
                     "type": "Feature",
                     "geometry": null,
                     "properties": {
-                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511993-2343318",
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2514475-2345300",
                         "@type": "wx:Alert",
-                        "id": "NWS-IDP-PROD-2511993-2343318",
-                        "areaDesc": "Central Siskiyou County; North Central and Southeast Siskiyou County; South Central Siskiyou County; Northeast Siskiyou and Northwest Modoc Counties",
+                        "id": "NWS-IDP-PROD-2514475-2345300",
+                        "areaDesc": "Northwest Deserts; Morongo Basin; Cadiz Basin; Sheep Range; San Bernardino County-Upper Colorado River Valley; Lake Havasu and Fort Mohave; Lake Mead National Recreation Area; Northwest Plateau; Lincoln County; Northeast Clark County; Southern Clark County; Las Vegas Valley; Eastern Mojave Desert, Including the Mojave National Preserve; Spring Mountains-Red Rock Canyon; Lake Mead National Recreation Area; Western Clark and Southern Nye County",
                         "geocode": {
                             "UGC": [
-                                "CAZ081",
-                                "CAZ083",
-                                "CAZ082",
-                                "CAZ084"
+                                "AZZ003",
+                                "CAZ525",
+                                "CAZ526",
+                                "NVZ018",
+                                "CAZ527",
+                                "AZZ002",
+                                "AZZ036",
+                                "AZZ001",
+                                "NVZ015",
+                                "NVZ016",
+                                "NVZ022",
+                                "NVZ020",
+                                "CAZ524",
+                                "NVZ019",
+                                "NVZ021",
+                                "NVZ017"
                             ],
                             "SAME": [
-                                "006093",
-                                "006049"
+                                "004015",
+                                "006071",
+                                "032017",
+                                "032003",
+                                "032023"
                             ]
                         },
-                        "references": [],
-                        "sent": "2017-09-05T17:50:49+00:00",
-                        "effective": "2017-09-05T17:50:49+00:00",
-                        "onset": "2017-09-05T17:50:00+00:00",
-                        "expires": "2017-09-06T19:00:00+00:00",
-                        "ends": "2017-09-07T19:00:00+00:00",
+                        "references": [
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2513991-2344795"
+                        ],
+                        "sent": "2017-09-08T11:52:09+00:00",
+                        "effective": "2017-09-08T11:52:09+00:00",
+                        "onset": "2017-09-08T16:00:00+00:00",
+                        "expires": "2017-09-09T03:00:00+00:00",
+                        "ends": "2017-09-11T12:00:00+00:00",
                         "status": "Actual",
-                        "messageType": "Alert",
+                        "messageType": "Update",
                         "category": "Met",
-                        "severity": "Moderate",
-                        "certainty": "Likely",
-                        "urgency": "Expected",
-                        "event": "Dense Smoke Advisory",
-                        "sender": "NWS Medford OR",
-                        "headline": "Dense Smoke Advisory issued September 5 at 10:50AM PDT expiring September 7 at 12:00PM PDT by NWS Medford OR",
-                        "description": "Periods of dense smoke are expected through midday Thursday\nacross the mid-elevations and valleys of Siskiyou County from the\nShasta Valley westward.\nThe National Weather Service in Medford has issued a Dense Smoke\nAdvisory...which is in effect until noon PDT Thursday.\n\n* Visibilities: A quarter of a mile or less, at times.\n\n* Locations in the dense smoke advisory: Mid-elevations and\nvalleys of Siskiyou County from the Shasta Valley westward\n\n* Dense Smoke Impacts: Dense smoke from wildfires will create\nhazardous driving conditions, at times, on area roadways.\n\n* View the hazard area in detail at\nhttps://www.wrh.noaa.gov/mfr/HAZARD",
-                        "instruction": "* If driving, slow down, use your headlights, and leave plenty of\ndistance between you and other vehicles.\n\n* Check up on relatives and neighbors, as well as outdoor pets and\nlivestock.",
-                        "response": "Execute",
+                        "severity": "Severe",
+                        "certainty": "Possible",
+                        "urgency": "Future",
+                        "event": "Flash Flood Watch",
+                        "sender": "NWS Las Vegas NV",
+                        "headline": "Flash Flood Watch issued September 8 at 4:51AM PDT expiring September 11 at 5:00AM PDT by NWS Las Vegas NV",
+                        "description": "Moisture will continue to increase today and remain through\nSunday leading to favorable conditions for scattered heavy rain\nproducing thunderstorms across much of southern Nevada, northwest\nArizona, and southeast California.\nThe Flash Flood Watch continues for\n\n* Portions of northwest Arizona, southeast California, and\nNevada, including the following areas, in northwest Arizona,\nLake Havasu and Fort Mohave, Lake Mead National Recreation\nArea, Northwest Deserts, and Northwest Plateau. In southeast\nCalifornia, Cadiz Basin, Eastern Mojave Desert, Morongo Basin,\nand San Bernardino County-Upper Colorado River Valley. In\nNevada, Lake Mead National Recreation Area, Las Vegas Valley,\nLincoln County, Northeast Clark County, Sheep Range, Southern\nClark County, Spring Mountains-Red Rock Canyon, and Western\nClark and Southern Nye County.\n\n* From 9 AM PDT /9 AM MST/ this morning through late Sunday night\n\n* Scattered thunderstorms will be capable of producing intense\nrainfall which could lead to flash flooding. Flooding of\nnormally dry washes, low water crossings, and poorly drained\nintersections is likely. Washes in urban areas will also likely\nsee rapid increases that see little to no rainfall. Be\nespecially cautious at night when flash flood danger may be\nharder to see.",
+                        "instruction": "A Flash Flood Watch means that conditions may become favorable\nfor flooding of washes...streams and other drainage areas in the\nwatch area. If you are in the watch area...you should closely\nmonitor weather forecasts and be prepared to take immediate\naction should heavy rain and flooding occur or a flash flood\nwarning is issued.\n\nListen to NOAA weather radio...commercial radio or television\nstations for updates on this flash flood threat or by visiting us\nonline at\n\nweather.gov/lasvegas",
+                        "response": "Monitor",
                         "parameters": {
                             "NWSheadline": [
-                                "DENSE SMOKE ADVISORY IN EFFECT UNTIL NOON PDT THURSDAY"
+                                "FLASH FLOOD WATCH REMAINS IN EFFECT FROM 9 AM PDT /9 AM MST/ THIS MORNING THROUGH LATE SUNDAY NIGHT"
                             ],
                             "VTEC": [
-                                "/O.EXB.KMFR.SM.Y.0005.000000T0000Z-170907T1900Z/"
+                                "/O.CON.KVEF.FF.A.0008.170908T1600Z-170911T1200Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
                             ],
                             "PIL": [
-                                "MFRNPWMFR"
+                                "VEFFFAVEF"
                             ],
                             "BLOCKCHANNEL": [
                                 "CMAS",
@@ -112,57 +132,71 @@ http_interactions:
                                 "NWEM"
                             ],
                             "eventEndingTime": [
-                                "2017-09-07T19:00:00Z"
+                                "2017-09-11T12:00:00Z"
                             ]
                         }
                     }
                 },
                 {
-                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511994-2343319",
+                    "id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2514403-2345218",
                     "type": "Feature",
                     "geometry": null,
                     "properties": {
-                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2511994-2343319",
+                        "@id": "https://api.weather.gov/alerts/NWS-IDP-PROD-2514403-2345218",
                         "@type": "wx:Alert",
-                        "id": "NWS-IDP-PROD-2511994-2343319",
-                        "areaDesc": "Western Siskiyou County",
+                        "id": "NWS-IDP-PROD-2514403-2345218",
+                        "areaDesc": "Imperial Valley; Parker Valley; Joshua Tree NP West; Chiriaco Summit; Joshua Tree NP East; Chuckwalla Mountains; Palo Verde Valley; Imperial County Southeast; Chuckwalla Valley",
                         "geocode": {
                             "UGC": [
-                                "CAZ080"
+                                "CAZ567",
+                                "AZZ530",
+                                "CAZ560",
+                                "CAZ568",
+                                "CAZ561",
+                                "CAZ564",
+                                "CAZ569",
+                                "CAZ565",
+                                "CAZ570"
                             ],
                             "SAME": [
-                                "006093"
+                                "006025",
+                                "004012",
+                                "006071",
+                                "006065"
                             ]
                         },
                         "references": [
-                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2511765-2343153"
+                            "https://api.weather.gov/alerts/NWS-IDP-PROD-2513993-2344797"
                         ],
-                        "sent": "2017-09-05T17:50:49+00:00",
-                        "effective": "2017-09-05T17:50:49+00:00",
-                        "onset": "2017-09-05T17:50:00+00:00",
-                        "expires": "2017-09-06T19:00:00+00:00",
-                        "ends": "2017-09-07T19:00:00+00:00",
+                        "sent": "2017-09-08T09:10:51+00:00",
+                        "effective": "2017-09-08T09:10:51+00:00",
+                        "onset": "2017-09-08T21:00:00+00:00",
+                        "expires": "2017-09-09T00:00:00+00:00",
+                        "ends": "2017-09-10T07:00:00+00:00",
                         "status": "Actual",
                         "messageType": "Update",
                         "category": "Met",
-                        "severity": "Moderate",
-                        "certainty": "Likely",
-                        "urgency": "Expected",
-                        "event": "Dense Smoke Advisory",
-                        "sender": "NWS Medford OR",
-                        "headline": "Dense Smoke Advisory issued September 5 at 10:50AM PDT expiring September 7 at 12:00PM PDT by NWS Medford OR",
-                        "description": "Periods of dense smoke are expected through midday Thursday\nacross the mid-elevations and valleys of Siskiyou County from the\nShasta Valley westward.\n* Visibilities: A quarter of a mile or less, at times.\n\n* Locations in the dense smoke advisory: Mid-elevations and\nvalleys of Siskiyou County from the Shasta Valley westward\n\n* Dense Smoke Impacts: Dense smoke from wildfires will create\nhazardous driving conditions, at times, on area roadways.\n\n* View the hazard area in detail at\nhttps://www.wrh.noaa.gov/mfr/HAZARD",
-                        "instruction": "* If driving, slow down, use your headlights, and leave plenty of\ndistance between you and other vehicles.\n\n* Check up on relatives and neighbors, as well as outdoor pets and\nlivestock.",
-                        "response": "Execute",
+                        "severity": "Severe",
+                        "certainty": "Possible",
+                        "urgency": "Future",
+                        "event": "Flash Flood Watch",
+                        "sender": "NWS Phoenix AZ",
+                        "headline": "Flash Flood Watch issued September 8 at 2:10AM MST expiring September 10 at 12:00AM MST by NWS Phoenix AZ",
+                        "description": "The Flash Flood Watch continues for\n\n* Portions of southwest Arizona and California, including the\nfollowing areas, in southwest Arizona, Parker Valley. In\nCalifornia, Chiriaco Summit, Chuckwalla Mountains, Chuckwalla\nValley, Imperial County Southeast, Imperial Valley, Joshua\nTree NP East, Joshua Tree NP West, and Palo Verde Valley.\n\n* From 2 PM MST /2 PM PDT/ this afternoon through Saturday\nevening\n\n* Numerous showers and thunderstorms and the potential for\nseveral rounds of heavy rain will impact much of the area\nthrough Saturday.\n\n* Flooding of normally dry washes, low water crossings, and\npoorly drained intersections is likely. Be especially cautious\nat night when flash flood danger may be harder to see.",
+                        "instruction": "A Flash Flood Watch means that flooding of washes, creeks and\nother drainage areas is possible within the watch area. If you\nare in the watch area, you should watch the weather and be\nprepared to take immediate action should heavy rain and flooding\noccur or a flash flood warning be issued.",
+                        "response": "Monitor",
                         "parameters": {
                             "NWSheadline": [
-                                "DENSE SMOKE ADVISORY NOW IN EFFECT UNTIL NOON PDT THURSDAY"
+                                "FLASH FLOOD WATCH REMAINS IN EFFECT FROM 2 PM MST /2 PM PDT/ THIS AFTERNOON THROUGH SATURDAY EVENING"
                             ],
                             "VTEC": [
-                                "/O.EXT.KMFR.SM.Y.0005.000000T0000Z-170907T1900Z/"
+                                "/O.CON.KPSR.FF.A.0001.170908T2100Z-170910T0700Z/"
+                            ],
+                            "EAS-ORG": [
+                                "WXR"
                             ],
                             "PIL": [
-                                "MFRNPWMFR"
+                                "PSRFFAPSR"
                             ],
                             "BLOCKCHANNEL": [
                                 "CMAS",
@@ -170,7 +204,7 @@ http_interactions:
                                 "NWEM"
                             ],
                             "eventEndingTime": [
-                                "2017-09-07T19:00:00Z"
+                                "2017-09-10T07:00:00Z"
                             ]
                         }
                     }
@@ -179,5 +213,5 @@ http_interactions:
             "title": "Current watches, warnings, and advisories for California"
         }
     http_version: 
-  recorded_at: Tue, 05 Sep 2017 18:20:53 GMT
+  recorded_at: Fri, 08 Sep 2017 14:43:37 GMT
 recorded_with: VCR 3.0.3

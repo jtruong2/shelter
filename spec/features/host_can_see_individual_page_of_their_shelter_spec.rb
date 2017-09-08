@@ -28,6 +28,7 @@ RSpec.describe "Host Shelter Owner Can" do
      expect(page).to have_content @user.properties.first.street_address
      expect(page).to have_content @user.properties.first.city
      expect(page).to have_content @user.properties.first.state
+     expect(page).to have_content @user.properties.first.rooms_available
    end
   end
 end

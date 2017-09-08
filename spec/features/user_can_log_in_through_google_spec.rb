@@ -16,7 +16,7 @@ RSpec.describe "User Can Sign In And Out Through Google" do
      click_on "Logout"
 
      expect(current_path).to eq root_path
-     expect(page).to have_content "Login"
+     expect(page).to have_link "Sign in manually to access the app."
      expect(page).to_not have_content "homies@shelteredhomies.com"
     end
   end

@@ -1,20 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe "Host Shelter Owner Can" do
-
   before :each do
     Role.create(name: "user")
     Role.create(name: "owner")
     @user = create(:user)
   end
 
-  it "Sees a list of their properties at the Properties Index Page" do
-    VCR.use_cassette("features/see_props") do
-      @user.properties.create(:street_address => "1331 17th St",
-                              :city => "Denver",
-                              :state => "Colorado",
-                              :rooms_available => 2)
+  scenario "sends default request" do
+    VCR.use_cassette("properties/view_index") do
 
+      @user.properties.create(:street_address => "1701 Bryant St",
+                                  :city => "Denver",
+                                  :state => "Colorado",
+                                  :rooms_available => 2)
       @user.owner!
 
      allow_any_instance_of(ApplicationController).to receive(:current_user).
@@ -27,21 +26,21 @@ RSpec.describe "Host Shelter Owner Can" do
      expect(page).to have_content @user.properties.first.street_address
      expect(page).to have_content @user.properties.first.city
      expect(page).to have_content @user.properties.first.state
-   end
+    end
   end
 
-  it "Sees a list of their properties at the Properties Index Page" do
-    VCR.use_cassette("features/see_more_props") do
+  scenario "sends different default request" do
+    VCR.use_cassette("properties/view_index_dos") do
 
       @user.properties.create(:street_address => "1701 Bryant St",
-                              :city => "Denver",
-                              :state => "Colorado",
-                              :rooms_available => 2)
+                                    :city => "Denver",
+                                    :state => "Colorado",
+                                    :rooms_available => 2)
 
       @user.properties.create(:street_address => "1331 17th St",
-                              :city => "Denver",
-                              :state => "Colorado",
-                              :rooms_available => 12)
+                                    :city => "Denver",
+                                    :state => "Colorado",
+                                    :rooms_available => 12)
 
       @user.owner!
 
