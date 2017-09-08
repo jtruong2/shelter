@@ -10,11 +10,11 @@ Disclaimer: Do NOT Use, Not Legitimate Application
 
 # Team
 
-[Eddie Rose](https://github.com/erose357)
-[Jimmy Truong](https://github.com/jtruong2)
-[Mark Van Akkeren](https://github.com/markyv18)
-[Wil Donovan](https://github.com/swdonovan)
-[Will Ratterman](https://github.com/wratterman)
+- [Eddie Rose](https://github.com/erose357)
+- [Jimmy Truong](https://github.com/jtruong2)
+- [Mark Van Akkeren](https://github.com/markyv18)
+- [Wil Donovan](https://github.com/swdonovan)
+- [Will Ratterman](https://github.com/wratterman)
 
 
 ## Installing / Getting started
