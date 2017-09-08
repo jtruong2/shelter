@@ -2,8 +2,7 @@
 
 # Shelter
 
-> Welcome to Shelter, a community based app for those in need and those wanting to help.
-> Please click one of the options below to log in.
+> Welcome to [Shelter](http://shelter-in-need.herokuapp.com/), a community based app for those in need and those wanting to help
 
 Shelter is a dynamic web app designed for connecting individuals who need emergency housing in times of Environmental Catastrophe with home providers in their area.
 
@@ -32,58 +31,23 @@ Next, you are going to want to set up your database.
 [Database]((https://rawgithubusercontent.com/jtruong2/shelter/master/app/assets/images/db.png))
 
 In your terminal...
+
 ```shell
 $ bundle exec rails db:create db:migrate db:seed
 ```
+
 ## Configuration
 
-  HERE JIMMY
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
+HERE JIMMY 
 
 ## Features
 
-What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
+The features of this application include...
+- Allowing any visitor to search and get live emergency weather alerts via [NOAA Weather API](https://forecast-v3.weather.gov/documentation?redirect=legacy)
+- Allowing for Google Sign-In
+- Manual Sign In comes with two-step verification
+- Allows for a registered user to search for, view and reserve properties in their area
+- A user can also be a home provider, and can approve, cancel and complete reservations at their home
+- Displays the properties of registered home owners  
+- Allows for user to get directions immediately to a property using the [Google Maps API](https://console.developers.google.com/apis/api/directions_backend/overview?project=key-chalice-179020&duration=PT1H) 
 
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
