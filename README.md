@@ -18,16 +18,16 @@ In order to get Shelter running locally make sure you are running , copy the fol
 $ git clone git@github.com:jtruong2/shelter.git
 $ cd shelter
 $ bundle
-$ bundle exec rails db:create db:migrate db:seed
-$  
 ```
-
-Here you should say what actually happens when you execute the code above.
-
+Next, you are going to want to set up your database.
+```shell
+$ bundle exec rails db:create db:migrate db:seed
+```
+In addition to setting up your
 ## Configuration
 
   HERE JIMMY
-  
+
 ### Building
 
 If your project needs some additional steps for the developer to build the
