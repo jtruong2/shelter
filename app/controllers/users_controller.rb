@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       UserMailer.welcome_email(user).deliver_now
-      redirect_to root_path
+      redirect_to twitter_
     else
       redirect_to new_user_path
     end
