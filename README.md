@@ -38,7 +38,13 @@ $ bundle exec rails db:create db:migrate db:seed
 
 ## Configuration
 
-HERE JIMMY 
+ Keys that you'll in your config/application.yml:
+ * GOOGLE_CLIENT_ID
+ * GOOGLE_CLIENT_SECRET
+ * GOOGLE_MAPS_ID
+ (This application uses Gmail configuration for the email functionality. You will need to add a gmail account to this file like this...)
+ * GMAIL: 'example@gmail.com
+ * PASSWORD 'example'
 
 ## Features
 
