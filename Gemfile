@@ -16,10 +16,12 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'bcrypt', '~> 3.1.7'
+gem 'faker'
 gem 'mail'
 gem 'mail_form'
 gem 'geocoder'
 gem 'gmaps4rails'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

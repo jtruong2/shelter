@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "Host Shelter Owner Can" do
-
   before :each do
     Role.create(name: "user")
     Role.create(name: "owner")
@@ -42,6 +41,7 @@ RSpec.describe "Host Shelter Owner Can" do
                               :city => "Denver",
                               :state => "Colorado",
                               :rooms_available => 12)
+
 
       @user.owner!
 
