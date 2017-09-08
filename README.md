@@ -38,7 +38,7 @@ $ bundle exec rails db:create db:migrate db:seed
 
 ## Configuration
 
- Keys that you'll in your config/application.yml:
+ Keys that you'll need in your config/application.yml:
  * GOOGLE_CLIENT_ID
  * GOOGLE_CLIENT_SECRET
  * GOOGLE_MAPS_ID
