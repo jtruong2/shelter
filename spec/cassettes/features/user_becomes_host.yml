@@ -1,0 +1,239 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Circle%20Drive,%20Denver,%20CO&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 19:11:05 GMT
+      Expires:
+      - Fri, 08 Sep 2017 19:11:05 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '600'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '9565'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Circle Drive",
+                       "short_name" : "Circle Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Evergreen",
+                       "short_name" : "Evergreen",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80439",
+                       "short_name" : "80439",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Circle Dr, Evergreen, CO 80439, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.6942813,
+                          "lng" : -105.4111054
+                       },
+                       "southwest" : {
+                          "lat" : 39.6942674,
+                          "lng" : -105.4111104
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.6942813,
+                       "lng" : -105.4111054
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.6956233302915,
+                          "lng" : -105.4097589197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.6929253697085,
+                          "lng" : -105.4124568802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "EicxMjMgQ2lyY2xlIERyLCBFdmVyZ3JlZW4sIENPIDgwNDM5LCBVU0E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 21:50:29 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Circle%20Drive,%20Denver,%20CO&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 19:11:05 GMT
+      Expires:
+      - Fri, 08 Sep 2017 19:11:05 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '600'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '9565'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Circle Drive",
+                       "short_name" : "Circle Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Evergreen",
+                       "short_name" : "Evergreen",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Clear Creek County",
+                       "short_name" : "Clear Creek County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80439",
+                       "short_name" : "80439",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Circle Dr, Evergreen, CO 80439, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.6942813,
+                          "lng" : -105.4111054
+                       },
+                       "southwest" : {
+                          "lat" : 39.6942674,
+                          "lng" : -105.4111104
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.6942813,
+                       "lng" : -105.4111054
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.6956233302915,
+                          "lng" : -105.4097589197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.6929253697085,
+                          "lng" : -105.4124568802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "EicxMjMgQ2lyY2xlIERyLCBFdmVyZ3JlZW4sIENPIDgwNDM5LCBVU0E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 21:50:29 GMT
+recorded_with: VCR 3.0.3
