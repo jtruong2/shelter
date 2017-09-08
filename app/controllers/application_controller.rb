@@ -7,6 +7,14 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 
+  def omniauth_user
+    @omniauth_info ||= session[:omniauth_info] if session[:omniauth_info]
+  end
+
+  def fb_user
+    @omniauth_info ||= session[:omniauth_info] if session[:omniauth_info]
+  end
+
   def all_coordinates
     Property.all_coordinates
   end

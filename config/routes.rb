@@ -7,17 +7,16 @@ Rails.application.routes.draw do
 
   get '/alerts', to: 'alerts#index'
 
+  get '/search', to: 'search#index'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/login', to: 'sessions#destroy'
   delete 'logout', to: 'sessions#destroy'
   get 'logout', to: 'sessions#destroy'
-
   get '/auth/google/callback', to: 'sessions#create'
-  get '/auth/google', as: 'google_login'
 
-  get '/auth/facebook/callback', to: 'sessions#create'
-  get '/auth/facebook', as: 'facebook_login'
+  get '/auth/google', as: 'google_login'
 
   namespace :host_shelters do
     get '/sign_up', to: 'properties#new'
@@ -26,6 +25,7 @@ Rails.application.routes.draw do
       post "status_cancelled", :action => :status_cancelled
       post "status_complete", :action => :status_complete
       resources :reservations, only: [:index]
+      resources :directions, only: [:index]
     end
     get '/:id', to: 'properties#show'
   end

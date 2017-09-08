@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+    auth = User.fb_token_call(params[:code])
+    a = User.from_fb(auth)
+
+    session[:user_id] = a.uid
+    current_user
+    redirect_to root_path
   end
 
   def create
