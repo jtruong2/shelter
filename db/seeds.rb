@@ -53,6 +53,7 @@ def seed_roles
 end
 
 def seed_users
+
   counter = 0
   100.times do
     User.create(first_name: Faker::Name.first_name,
@@ -92,3 +93,4 @@ seed_users
 user_owners
 seed_owners
 seed_properties
+

@@ -9,6 +9,10 @@ require 'capybara/rails'
 require 'webmock/rspec'
 require 'vcr'
 
+require 'webmock/rspec'
+require 'vcr'
+require 'mail'
+
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({

@@ -18,7 +18,7 @@ RSpec.describe "User can create an account for manual login" do
     click_on "Register"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content("Welcome, #{user.email}")
+    expect(page).to have_content("Welcome, #{user.first_name}")
   end
 
   it "logs into account with valid credentials and logs out" do
@@ -32,10 +32,10 @@ RSpec.describe "User can create an account for manual login" do
     click_on "Sign In"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content("Welcome, #{user.email}")
+    expect(page).to have_content("Welcome, #{user.first_name}")
 
     click_on "Logout"
 
-    expect(page).to_not have_content("Welcome, #{user.email}")
+    expect(page).to_not have_content("Welcome, #{user.first_name}")
   end
 end
