@@ -1,0 +1,357 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Main%20st.,%20Denver,%20CO&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 23:21:02 GMT
+      Expires:
+      - Fri, 08 Sep 2017 23:21:02 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '792'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Main Street",
+                       "short_name" : "Main St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Lancaster County",
+                       "short_name" : "Lancaster County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Pennsylvania",
+                       "short_name" : "PA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "17517",
+                       "short_name" : "17517",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Main St, Denver, PA 17517, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.2303243,
+                       "lng" : -76.13390489999999
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.2316732802915,
+                          "lng" : -76.13255591970849
+                       },
+                       "southwest" : {
+                          "lat" : 40.2289753197085,
+                          "lng" : -76.1352538802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "EiIxMjMgTWFpbiBTdCwgRGVudmVyLCBQQSAxNzUxNywgVVNB",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Main Street",
+                       "short_name" : "Main St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Central City",
+                       "short_name" : "Central City",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gilpin County",
+                       "short_name" : "Gilpin County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80427",
+                       "short_name" : "80427",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Main St, Central City, CO 80427, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7999695,
+                          "lng" : -105.5126878
+                       },
+                       "southwest" : {
+                          "lat" : 39.7997983,
+                          "lng" : -105.5130321
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7998839,
+                       "lng" : -105.5128599
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.8012328802915,
+                          "lng" : -105.5115109697085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7985349197085,
+                          "lng" : -105.5142089302915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJcdWEIpC7a4cR8-rd4v7jBB4",
+                 "types" : [ "premise" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 23:21:02 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Main%20st.,%20Denver,%20CO&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 07 Sep 2017 23:21:02 GMT
+      Expires:
+      - Fri, 08 Sep 2017 23:21:02 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '792'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Main Street",
+                       "short_name" : "Main St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Lancaster County",
+                       "short_name" : "Lancaster County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Pennsylvania",
+                       "short_name" : "PA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "17517",
+                       "short_name" : "17517",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Main St, Denver, PA 17517, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.2303243,
+                       "lng" : -76.13390489999999
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 40.2316732802915,
+                          "lng" : -76.13255591970849
+                       },
+                       "southwest" : {
+                          "lat" : 40.2289753197085,
+                          "lng" : -76.1352538802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "EiIxMjMgTWFpbiBTdCwgRGVudmVyLCBQQSAxNzUxNywgVVNB",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Main Street",
+                       "short_name" : "Main St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Central City",
+                       "short_name" : "Central City",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gilpin County",
+                       "short_name" : "Gilpin County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80427",
+                       "short_name" : "80427",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Main St, Central City, CO 80427, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7999695,
+                          "lng" : -105.5126878
+                       },
+                       "southwest" : {
+                          "lat" : 39.7997983,
+                          "lng" : -105.5130321
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7998839,
+                       "lng" : -105.5128599
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.8012328802915,
+                          "lng" : -105.5115109697085
+                       },
+                       "southwest" : {
+                          "lat" : 39.7985349197085,
+                          "lng" : -105.5142089302915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJcdWEIpC7a4cR8-rd4v7jBB4",
+                 "types" : [ "premise" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 07 Sep 2017 23:21:02 GMT
+recorded_with: VCR 3.0.3

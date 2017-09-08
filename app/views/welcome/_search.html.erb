@@ -1,0 +1,5 @@
+
+  <%= form_tag :alerts, method: :get, class: "form-inline" do %>
+      <%= text_field_tag :state, "Enter a State abbreviation here to see Weather...", class: "form-control" %>
+      <%= submit_tag "Search" %>
+  <% end %>

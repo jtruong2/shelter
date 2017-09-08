@@ -1,14 +1,20 @@
 <footer id="footer">
   <div class="inner">
     <section>
-      <h2>Follow</h2>
+      <h2>Follow Us</h2>
       <ul class="icons">
         <li> <%= link_to image_tag('twitter_icon.png'), "https://www.twitter.com/communityshelter" %> </li>
         <li> <%= link_to image_tag('fb_icon.png'), "https://www.facebook.com/communityshelter" %> </li>
         <li> <%= link_to image_tag('insta_icon.png'), "https://www.instagram.com/communityshelter" %> </li>
         <li> <%= link_to image_tag('mail_icon.png'), "mailto:shelterapp@turing.io?subject=ShelterApp" %> </li>
       </ul>
+      <p></p>
     </section>
+
+    <% if current_user %>
+      <h2><%= link_to " Click here to logout", logout_path, method: :delete%> </h2>
+    <% end %>
+
     <ul class="copyright">
       <% if current_user %>
         <li> <%= link_to "Become Host Shelter", host_shelters_sign_up_path %> </li>

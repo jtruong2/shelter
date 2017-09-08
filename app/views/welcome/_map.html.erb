@@ -1,0 +1,11 @@
+<!-- JIMMY, this needs a responsive wrapper -->
+
+  <% if current_user %>
+    <strong><h2 style="color:red;"> <%= link_to "Can you help those in need? Click here to sign up to be a host.", host_shelters_sign_up_path %> </h2></strong>
+  <% end %>
+
+  <h2>Check the map below if you are seeking shelter.</h2>
+
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
