@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   before_save :user_role_create
 
+  has_many :authorizations
+
   has_many :user_roles
   has_many :roles, through: :user_roles
   has_many :properties
@@ -26,6 +28,16 @@ class User < ApplicationRecord
       user.token      = auth["credentials"]["token"]
       user.password   = "password"
     end
+  end
+
+  def self.create_from_hash!(hash)
+    create(first_name: hash[:extra][:raw_info][:name], email: hash[:extra][:raw_info][:email], uid: hash[:extra][:raw_info][:id], token: hash[:credentials][:token])
+    # user = find_or_create_by(uid: auth[:uid]) do |user|
+    #   user.uid        = hash[:extra][:raw_info][:id]
+    #   user.first_name = hash[:extra][:raw_info][:name]
+    #   user.email      = hash[:extra][:raw_info][:email]
+    #   user.token      = hash[:credentials][:token]
+    # end
   end
 
   def user?

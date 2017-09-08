@@ -8,4 +8,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     :image_size => 50,
     :access_type => 'offline'
   }
+  provider :twitter, ENV["TWITTER_API_KEY"], ENV["TWITTER_API_SECRET"]
+  provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'],
+  scope: 'email,public_profile', display: 'popup'
+
 end
