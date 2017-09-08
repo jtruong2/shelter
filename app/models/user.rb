@@ -31,7 +31,10 @@ class User < ApplicationRecord
   end
 
   def self.create_from_hash!(hash)
-    create(first_name: hash[:extra][:raw_info][:name], email: hash[:extra][:raw_info][:email], uid: hash[:extra][:raw_info][:id], token: hash[:credentials][:token])
+    create(first_name: hash[:extra][:raw_info][:name],
+           email:      hash[:extra][:raw_info][:email],
+           uid:        hash[:extra][:raw_info][:id],
+           token:      hash[:credentials][:token])
     # user = find_or_create_by(uid: auth[:uid]) do |user|
     #   user.uid        = hash[:extra][:raw_info][:id]
     #   user.first_name = hash[:extra][:raw_info][:name]
