@@ -1,6 +1,7 @@
-![Logo of the project](https://github.com/jtruong2/shelter/master/app/assets/images/home_icon.png)
+![Logo of the project](https://rawgithubusercontent.com/jtruong2/shelter/master/app/assets/images/home_icon.png)
 
 # Shelter
+
 > Welcome to Shelter, a community based app for those in need and those wanting to help.
 > Please click one of the options below to log in.
 
@@ -8,22 +9,32 @@ Shelter is a dynamic web app designed for connecting individuals who need emerge
 
 Disclaimer: Do NOT Use, Not Legitimate Application   
 
+# Team
+
+[Eddie Rose](https://github.com/erose357)
+[Jimmy Truong](https://github.com/jtruong2)
+[Mark Van Akkeren](https://github.com/markyv18)
+[Wil Donovan](https://github.com/swdonovan)
+[Will Ratterman](https://github.com/wratterman)
+
+
 ## Installing / Getting started
 
 Shelter is dependent on having developer keys for the [Google APIs](https://console.developers.google.com/projectselector/apis/library) and for [Google Maps APIs](https://console.developers.google.com/apis/api/directions_backend/overview?project=key-chalice-179020&duration=PT1H)
 
 In order to get Shelter running locally make sure you are running , copy the following into your terminal.
-
 ```shell
 $ git clone git@github.com:jtruong2/shelter.git
 $ cd shelter
 $ bundle
 ```
 Next, you are going to want to set up your database.
+[Database]((https://rawgithubusercontent.com/jtruong2/shelter/master/app/assets/images/db.png))
+
+In your terminal...
 ```shell
 $ bundle exec rails db:create db:migrate db:seed
 ```
-In addition to setting up your
 ## Configuration
 
   HERE JIMMY
@@ -76,33 +87,3 @@ Example:
 ```bash
 awesome-project "Some other value"  # Prints "You're nailing this readme!"
 ```
-
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
-
-## Contributing
-
-When you publish something open source, one of the greatest motivations is that
-anyone can just jump in and start contributing to your project.
-
-These paragraphs are meant to welcome those kind souls to feel that they are
-needed. You should state something like:
-
-"If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome."
-
-If there's anything else the developer needs to know (e.g. the code style
-guide), you should link it here. If there's a lot of things to take into
-consideration, it is common to separate this section to its own file called
-`CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
-
-## Licensing
-
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
-
-"The code in this project is licensed under MIT license."
